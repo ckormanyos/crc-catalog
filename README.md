@@ -9,7 +9,7 @@ Using crc-catalog is straightforward. For instance, let's calculate the standard
 #include <iomanip>
 #include <iostream>
 
-#include <crc_catalog_c.h>
+#include <crc_catalog.h>
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
   }};
 
   const std::uint16_t crc_result =
-    crc_crc16_ccitt_false(crc_test_data.data(), crc_test_data.size());
+    crc::catalog::crc_crc16_ccitt_false(crc_test_data.data(), crc_test_data.size());
 
   const bool crc_result_is_ok = (crc_result == UINT16_C(0x29B1));
 
