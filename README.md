@@ -4,6 +4,7 @@ crc-catalog implements numerous CRCs using a bitwise algorithm implemented as a 
 
 Using crc-catalog is straightforward. For instance, let's calculate the standard check of CRC16/CCITT-FALSE
 
+```C
 #include <array>
 #include <iomanip>
 #include <iostream>
@@ -24,3 +25,4 @@ int main()
 
   std::cout << "crc_result_is_ok: " << std::boolalpha << crc_result_is_ok << std::endl;
 }
+```
