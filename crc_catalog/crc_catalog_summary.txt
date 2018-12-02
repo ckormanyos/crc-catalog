@@ -1,3 +1,5 @@
+See also: http://reveng.sourceforge.net/crc-catalogue/
+
 width= 3 poly=0x0000000000000003 init=0x0000000000000000 refin=false refout=false xorout=0x0000000000000007 check=0x0000000000000004 residue=0x0000000000000002 name="crc03_gsm"
 width= 3 poly=0x0000000000000003 init=0x0000000000000007 refin=true  refout=true  xorout=0x0000000000000000 check=0x0000000000000006 residue=0x0000000000000000 name="crc03_rohc"
 width= 4 poly=0x0000000000000003 init=0x000000000000000F refin=false refout=false xorout=0x000000000000000F check=0x000000000000000B residue=0x0000000000000002 name="crc04_interlaken"
