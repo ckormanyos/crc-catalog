@@ -26,4 +26,4 @@ int main()
   std::cout << "crc_result_is_ok: " << std::boolalpha << crc_result_is_ok << std::endl;
 }
 ```
-For more information on the parameters and origins of most of these CRCs, see also http://reveng.sourceforge.net/crc-catalogue/
+For additional information on the parameters and origins of most of these CRCs implemented in this repo, see also http://reveng.sourceforge.net/crc-catalogue/
