@@ -25,8 +25,6 @@
   struct uint_type_helper
   {
   private:
-    static_assert(true, "Error: uint_type_helper is not intended to be used for this NumberOfBits.");
-
     using exact_unsigned_type = std::uintmax_t;
   };
 
@@ -57,7 +55,7 @@
   template<const std::size_t NumberOfBits>
   struct uint_type_helper<NumberOfBits,
                           typename std::enable_if<(   (NumberOfBits >  32U)
-                                                   && (NumberOfBits <= 16U))>::type>
+                                                   && (NumberOfBits <= 64U))>::type>
   {
     using exact_unsigned_type = std::uint64_t;
   };
