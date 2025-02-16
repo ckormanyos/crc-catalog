@@ -1,0 +1,1920 @@
+Search for regex using [^\x00-\x7F]+
+CRC RevEng
+[ Home | Up | Summary | Legend | Disclaimer | Appendix ]
+Catalogue of parametrised CRC
+algorithms
+CRC-3/GSM
+width=3 poly=0x3 init=0x0 refin=false refout=false xorout=0x7 check=0x4 residue=0x2 name="CRC-3/GSM"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 3.1.2.1, p.18 --- Section 3.2.1, p.20)
+Created: 17 February 2017
+CRC-3/ROHC
+width=3 poly=0x3 init=0x7 refin=true refout=true xorout=0x0 check=0x6 residue=0x0 name="CRC-3/ROHC"
+Class: academic
+IETF RFC 3095 (July 2001)
+I Definition: Width, Poly, Init (Section 5.9.2, pp.125-6)
+Andreas Vernersson et al. (26 May 2003), rohc 1.0 module rohc-1.0/rohc
+/src/c_util.c
+III Code: C
+Created: 14 December 2009
+Updated: 6 February 2017
+CRC-4/INTERLAKEN
+width=4 poly=0x3 init=0xf refin=false refout=false xorout=0xf check=0xb residue=0x2 name="CRC-4/INTERLAKEN"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+The Interlaken Alliance (7 October 2008), Interlaken Protocol Definition, version 1.2
+I Definition: Width, Poly (Section 5.3.4.2, p.23)
+I Definition: Init, RefIn, RefOut, XorOut (Appendix B, p.48)
+Created: 10 February 2016
+Updated: 6 February 2017
+CRC-4/ITU
+width=4 poly=0x3 init=0x0 refin=true refout=true xorout=0x0 check=0x7 residue=0x0 name="CRC-4/ITU"
+Class: academic
+ITU-T Recommendation G.704 (October 1998)
+I Full mathematical description (Section 2.3.3.5, p.12)
+I Shift register diagram (Annex A.3, p.36)
+Created: 7 October 2008
+Updated: 6 February 2017
+CRC-5/EPC
+width=5 poly=0x09 init=0x09 refin=false refout=false xorout=0x00 check=0x00 residue=0x00 name="CRC-5/EPC"
+Class: attested
+Used in standardised RFID tags.
+EPCglobal Inc(TM) (24 April 2015), UHF Class 1 Gen 2: Air Interface Protocol
+Standard version 2.0.1
+I Definition: Width, Poly, Init, Residue (Table 6.12, p.37)
+I Definition: RefIn, Residue (Annex F.1, p.139)
+I Shift register circuit diagram (Figure F.1, p.139)
+I Transmission order, implying RefIn and RefOut (Section 6.3.1.4, p.37)
+Hee-Bok Kang et al. (December 2008), High Security FeRAM-Based EPC C1G2
+UHF (860 MHz-960 MHz) Passive RFID Tag Chip, ETRI Journal, Volume 30
+Number 6
+IV 1 codeword (p.830)
+1000100100000010000110
+"jgmh" (20 May 2009), Computer Interfacing Forum topic 1330
+IV 1 codeword
+1000000100000000010011
+Created: 20 May 2009
+Updated: 1 September 2017
+CRC-5/ITU
+width=5 poly=0x15 init=0x00 refin=true refout=true xorout=0x00 check=0x07 residue=0x00 name="CRC-5/ITU"
+Class: academic
+ITU-T Recommendation G.704 (October 1998)
+I Definition: Residue; full mathematical description (Section 2.2.3.2, pp.8-9)
+I Shift register diagram (Annex A.2, p.36)
+Created: 7 October 2008
+Updated: 15 February 2017
+CRC-5/USB
+width=5 poly=0x05 init=0x1f refin=true refout=true xorout=0x1f check=0x19 residue=0x06 name="CRC-5/USB"
+Class: third-party
+Anonymous (10 July 1997), "Cyclic Redundancy Checks in USB" (Draft) (courtesy
+of the Internet Archive)
+III Definition: Width, Poly, Init, XorOut (p.2)
+III Definition: Residue (p.3)
+III Code: Perl (pp.3-4)
+IV 4 codewords (p.5)
+1010100011110111
+0101110010111100
+0000111001001110
+1000000000010111
+Created: 1 December 2007
+Updated: 6 February 2017
+CRC-6/CDMA2000-A
+width=6 poly=0x27 init=0x3f refin=false refout=false xorout=0x00 check=0x0d residue=0x00 name="CRC-6/CDMA2000-A"
+Class: attested
+3rd Generation Partnership Project 2 (3GPP2) (October 2005), Physical layer
+standard for cdma2000 spread spectrum systems, revision D, version 2.0
+I Definition: Width, Poly (Section 2.1.3.1.4.1.5, p.2-91)
+I Full description (Section 2.1.3.1.4.1, p.2-89)
+I Shift register diagram (Figure 2.1.3.1.4.1.5-1, p.2-92)
+Agilent Technologies, Advanced Design System 2008 Update 2, CDMA2K_CRC_Coder
+module documentation (courtesy of the Internet Archive)
+III Full description
+J. Hurley, Avtec Inc. (6 May 2011), Computer Interfacing Forum topic 1702
+IV 3 codewords
+C101002E
+0110000F
+05100009
+reveng -m CRC-6/CDMA2000-A -a 1 -A 6 -X -c 11000001000000010000000000
+00000001000100000000000000 00000101000100000000000000 --> 2E 0F 09
+Created: 14 October 2013
+Updated: 1 September 2017
+CRC-6/CDMA2000-B
+width=6 poly=0x07 init=0x3f refin=false refout=false xorout=0x00 check=0x3b residue=0x00 name="CRC-6/CDMA2000-B"
+Class: academic
+3rd Generation Partnership Project 2 (3GPP2) (October 2005), Physical layer
+standard for cdma2000 spread spectrum systems, revision D, version 2.0
+I Definition: Width, Poly (Section 2.1.3.1.4.1.6, p.2-92)
+I Full description (Section 2.1.3.1.4.1, p.2-89)
+I Shift register diagram (Figure 2.1.3.1.4.1.6-1, p.2-92)
+Agilent Technologies, Advanced Design System 2008 Update 2, CDMA2K_CRC_Coder
+module documentation (courtesy of the Internet Archive)
+III Full description
+Created: 14 October 2013
+Updated: 1 September 2017
+CRC-6/DARC
+width=6 poly=0x19 init=0x00 refin=true refout=true xorout=0x00 check=0x26 residue=0x00 name="CRC-6/DARC"
+Class: attested
+ETSI EN 300 751 version 1.2.1 (January 2003)
+I Definition: Width, Poly (Section 11.2, pp.67-8)
+I Definition: RefIn, RefOut (Section 12, pp.69-70)
+IV 3 codewords (Section 11.2, pp.67-8)
+1001010011000100 = 2923
+0101001100011101 = CAB8
+00001100010000000010000000101101 = 300204B4
+See section 12 for details of the transmission order.
+reveng -m CRC-6/DARC -X -c 2923 CAB8 300204B4 --> 00 00 00
+reveng -m CRC-6/DARC -a 1 -A 8 -r -X -c 1001010011 0101001100 00001100
+010000000010000000 --> 20 B8 B4
+Unique effective solution of codeword set
+Created: 14 December 2009
+Updated: 6 February 2017
+CRC-6/GSM
+width=6 poly=0x2f init=0x00 refin=false refout=false xorout=0x3f check=0x13 residue=0x3a name="CRC-6/GSM"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 3.9.4.3, pp.31-3 --- Section 3.10.7.3,
+pp.47-9 --- Section 4.6, p.64 --- Section 5.3.2, p.95)
+Created: 17 February 2017
+CRC-6/ITU
+width=6 poly=0x03 init=0x00 refin=true refout=true xorout=0x00 check=0x06 residue=0x00 name="CRC-6/ITU"
+Class: academic
+ITU-T Recommendation G.704 (October 1998)
+I Full mathematical description (Section 2.1.3.1.2, p.3)
+I Shift register diagram (Annex A.1, p.35)
+Created: 7 October 2008
+Updated: 6 February 2017
+CRC-7
+width=7 poly=0x09 init=0x00 refin=false refout=false xorout=0x00 check=0x75 residue=0x00 name="CRC-7"
+Class: academic
+Used in the MultiMediaCard interface.
+JEDEC Standard JESD84-A441 (March 2010) (registration required)
+I Full definition (Section 10.2, pp.157-8)
+I Shift register diagram (Figure 53, p.158)
+Created: 7 October 2008
+Updated: 6 February 2017
+CRC-7/ROHC
+width=7 poly=0x4f init=0x7f refin=true refout=true xorout=0x00 check=0x53 residue=0x00 name="CRC-7/ROHC"
+Class: academic
+IETF RFC 3095 (July 2001)
+I Definition: Width, Poly, Init (Section 5.9.2, pp.125-6)
+Andreas Vernersson et al. (26 May 2003), rohc 1.0 module rohc-1.0/rohc
+/src/c_util.c
+III Code: C
+Created: 14 December 2009
+Updated: 6 February 2017
+CRC-7/UMTS
+width=7 poly=0x45 init=0x00 refin=false refout=false xorout=0x00 check=0x61 residue=0x00 name="CRC-7/UMTS"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+3rd Generation Partnership Project (3GPP) TS 25.427 version 14.0.0 (March 2017)
+(zipped MS Word document) --- ETSI TS 125 427 version 14.0.0 (April 2017)
+I Definition: Width, Poly, Init, XorOut (Section 7.2.1, p.40)
+I Definition: RefIn, RefOut (Section 6.1.1, p.20; Section 7.2.1.1, pp.40-1)
+Created: 8 February 2016
+Updated: 1 September 2017
+CRC-8
+width=8 poly=0x07 init=0x00 refin=false refout=false xorout=0x00 check=0xf4 residue=0x00 name="CRC-8"
+Class: attested
+The System Management Interface Forum, Inc. (3 August 2000), System
+Management Bus (SMBus) Specification, version 2.0
+I Definition: Width, Poly, RefIn, RefOut (Section 4.2, p.19; Section 5.4.1.3,
+p.27)
+The System Management Interface Forum, Inc. (14 June 2005), CRC-8 Calculator
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+John Milios, USAR Systems, Inc. (22 April 1999), Firmware CRC-8 implementations
+for SMBus (courtesy of the System Management Interface Forum, Inc.)
+III Definition: Width, Poly (p.5)
+III Worked example (p.6)
+III Code: 6805 assembler (pp.14,18)
+Michael Niedermayer (29 July 2017), FFmpeg 3.3.3 (bzip2 compressed tarfile),
+module ffmpeg-3.3.3/libavutil/tests/crc.c
+IV 1 codeword
+1999 bytes (i+i*i) plus E3
+Created: 30 March 2005
+Updated: 1 September 2017
+CRC-8/AUTOSAR
+width=8 poly=0x2f init=0xff refin=false refout=false xorout=0xff check=0xdf residue=0x42 name="CRC-8/AUTOSAR"
+Class: attested
+AUTOSAR (30 November 2016), AUTOSAR Classic Platform release 4.3,
+Specification of CRC Routines
+I Comprehensive primer on CRC theory (Section 7.1, pp.17-20)
+I All parameters (Section 7.2.1.2, p.23)
+IV 7 codewords (Section 7.2.1.2, p.23)
+0000000012
+F20183C2
+0FAA0055C6
+00FF551177
+332255AABBCCDDEEFF11
+926B5533
+FFFFFFFF6C
+Unique effective solution of codeword set
+Created: 24 July 2016
+Updated: 6 February 2017
+CRC-8/BLUETOOTH
+width=8 poly=0xa7 init=0x00 refin=true refout=true xorout=0x00 check=0x26 residue=0x00 name="CRC-8/BLUETOOTH"
+Class: attested
+Used in Bluetooth header error correction (HEC). Init=0x00 is used in the Inquiry
+Response substate.
+Bluetooth SIG (6 December 2016), Bluetooth Specification, Core Version 5.0
+I Definition: Init (Section 2.B.1.2.1, p.357)
+I Definition: Width, Poly (Section 2.B.7.1.1, p.429-30)
+I Definition: RefIn; shift register diagram (Figure 2.B.7.3, p.430)
+I Definition: Refin, RefOut, Residue (Figure 2.B.7.5, p.430)
+IV 10 codewords (Section 2.G.4, p.1597)
+110001001010000111
+001001001001001100
+101001001001011010
+011001001001000111
+111001001001010001
+110110001001111001
+001110001010110010
+101110001010100100
+011110001010111001
+111110001010101111
+Created: 20 June 2017
+Updated: 1 September 2017
+CRC-8/CDMA2000
+width=8 poly=0x9b init=0xff refin=false refout=false xorout=0x00 check=0xda residue=0x00 name="CRC-8/CDMA2000"
+Class: academic
+3rd Generation Partnership Project 2 (3GPP2) (October 2005), Physical layer
+standard for cdma2000 spread spectrum systems, revision D, version 2.0
+I Definition: Width, Poly (Section 2.1.3.1.4.1.4, p.2-91)
+I Full description (Section 2.1.3.1.4.1, p.2-89)
+I Shift register diagram (Figure 2.1.3.1.4.1.4-1, p.2-91)
+Agilent Technologies, Advanced Design System 2008 Update 2, CDMA2K_CRC_Coder
+module documentation (courtesy of the Internet Archive)
+III Full description
+Created: 14 October 2013
+Updated: 1 September 2017
+CRC-8/DARC
+width=8 poly=0x39 init=0x00 refin=true refout=true xorout=0x00 check=0x15 residue=0x00 name="CRC-8/DARC"
+Class: attested
+The single codeword is supported by the codewords confirming CRC-6/DARC,
+defined identically apart from Poly in the same standard.
+ETSI EN 300 751 version 1.2.1 (January 2003)
+I Definition: Width, Poly (Section 11.2.3, p.68)
+I Definition: RefIn, RefOut (Section 12, pp.69-70)
+IV 1 codeword (Section 11.2.3, p.68)
+000000010000001111010111 = 80C0EB
+See section 12 for details of the transmission order.
+Created: 14 December 2009
+Updated: 6 February 2017
+CRC-8/DVB-S2
+width=8 poly=0xd5 init=0x00 refin=false refout=false xorout=0x00 check=0xbc residue=0x00 name="CRC-8/DVB-S2"
+Class: academic
+Contributed by Hartmut Brandt, German Aerospace Center.
+ETSI EN 302 307-1 version 1.4.1 (November 2014)
+I Full mathematical description (Section 5.1.4, p.18)
+Ethernet POWERLINK Standardisation Group (16 October 2015), OpenSAFETY
+Safety Profile Specification Working Draft Proposal, version 1.5.0
+I Code: C (Appendix 1, pp.192-3)
+IV 1 codeword (Appendix 1, p.193)
+22C812563011223344556677884F
+Prof. Philip Koopman, Tridib Chakravarty (June 2004), Cyclic Redundancy Code
+(CRC) Polynomial Selection for Embedded Networks
+III Assessment of polynomial performance (as 0xEA or CRC-8)
+Created: 10 January 2014
+Updated: 1 September 2017
+CRC-8/EBU
+width=8 poly=0x1d init=0xff refin=true refout=true xorout=0x00 check=0x97 residue=0x00 name="CRC-8/EBU"
+Class: attested
+Alias: CRC-8/AES
+Reference from StackOverflow question by "ZeroDefect" (18 June 2012)
+European Broadcasting Union (8 June 2004), Tech 3250: Specification of the digital
+audio interface, 3rd edition
+I Definition: Width, Poly, Init (Section 4, p.12)
+I Shift register diagrams (Appendix 1, p.17)
+IV 2 codewords (Appendix 1, pp.17-18)
+3D020000020000000000000000000000000000000000009B
+010000000000000000000000000000000000000000000032
+Created: 19 July 2012
+Updated: 6 February 2017
+CRC-8/GSM-A
+width=8 poly=0x1d init=0x00 refin=false refout=false xorout=0x00 check=0x37 residue=0x00 name="CRC-8/GSM-A"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 3.1.1.1, pp.17-18)
+Created: 17 February 2017
+CRC-8/GSM-B
+width=8 poly=0x49 init=0x00 refin=false refout=false xorout=0xff check=0x94 residue=0x53 name="CRC-8/GSM-B"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 5.1.5.1.3, p.71 --- Section 5.1.5.2.2,
+p.73 --- Section 5.1.9.1.3, p.80 --- Section 5.1.9.2.2, p.83 --- Section
+5.1.11.1.3, pp.86-7 --- Section 5.1.11.2.2, p.89)
+Created: 17 February 2017
+CRC-8/I-CODE
+width=8 poly=0x1d init=0xfd refin=false refout=false xorout=0x00 check=0x7e residue=0x00 name="CRC-8/I-CODE"
+Class: attested
+Philips Semiconductors (30 January 2004), SL2 ICS11 Product Specification,
+revision 3.0 (courtesy of the Internet Archive)
+I Definition: Width, Poly, Init (Section 10.1, p.26)
+I Code: C (Section 10.3.1, pp.27-9)
+I Worked example (as code trace) (Section 10.3.1, p.29)
+Created: 3 November 2007
+Updated: 6 February 2017
+CRC-8/ITU
+width=8 poly=0x07 init=0x00 refin=false refout=false xorout=0x55 check=0xa1 residue=0xac name="CRC-8/ITU"
+Class: academic
+Used as the Asynchronous Transfer Mode Header Error Control sequence (ATM
+HEC). Single bit errors in the 4-byte ATM header can be automatically corrected.
+ITU-T Recommendation I.432.1 (February 1999)
+I Full mathematical description (Section 7.3.2.2, p.5)
+IV 2 trivial codewords (Section 7.3.2.2, p.6; Table 3, p.12)
+0000000000000000000000000000000001010101
+0000000000000000000000000000000101010010
+Broadband Forum Technical Committee (10 September 1993), User-Network
+Interface Specification, version 3.0 (compressed RTF) (courtesy of Faculty of
+Information Technology, Brno University of Technology, Czech Republic)
+I Full mathematical description (Section 2.2.6)
+Created: 19 April 2009
+Updated: 6 February 2017
+CRC-8/LTE
+width=8 poly=0x9b init=0x00 refin=false refout=false xorout=0x00 check=0xea residue=0x00 name="CRC-8/LTE"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+3rd Generation Partnership Project (3GPP) TS 36.212 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 212 version 14.3.0 (July 2017)
+I Definition: Width, Poly, Init, XorOut, Residue (Section 5.1.1, p.10)
+I Attachment relation, defining RefIn ^ RefOut (Section 5.1.1, p.10)
+3rd Generation Partnership Project (3GPP) TS 36.321 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 321 version 14.3.0 (July 2017)
+Referenced from TS 136 212 section 5.2.2.1, p.23
+I Definition: RefIn, RefOut (Section 6.1.1, pp.67-8)
+Created: 13 February 2016
+Updated: 3 September 2017
+CRC-8/MAXIM
+width=8 poly=0x31 init=0x00 refin=true refout=true xorout=0x00 check=0xa1 residue=0x00 name="CRC-8/MAXIM"
+Class: attested
+Alias: DOW-CRC
+Used in Maxim 1-Wire(R) device registration numbers.
+Maxim Integrated (8 August 2012), DS1921G Datasheet
+I Definition: Width, Poly, Init, XorOut (p.9)
+I Shift register diagram (p.9)
+Maxim Integrated (22 August 2012), Application Note 27 (PDF, HTML)
+I Definition: Init, Residue (pp.3-4)
+I Shift register diagram (p.3)
+I Code: 8051 assembler, Pascal (pp.5-8)
+I Worked examples (pp.5-9)
+Maxim Integrated, Maxim iButton(R) datasheets (for links see Application Note 27)
+IV 15 codewords
+DS1904: 242BC5FB00000040 (source: 40000000FBC52B24)
+DS1920: 102BC5FB000000A0 (source: A0000000FBC52B10)
+DS1921G: 212BC5FB00000089 (source: 89000000FBC52B21)
+DS1971: 142BC5FB00000054 (source: 54000000FBC52B14)
+DS1971: 14B3D8FB000000D4 (source: D4000000FBD8B314)
+DS1973: 232BC5FB000000F3 (source: F3000000FBC52B23)
+DS1973: 23B3D8FB00000073 (source: 73000000FBD8B323)
+DS1982: 092BC5FB00000097 (source: 97000000FBC52B09)
+DS1982: 09B3D8FB00000017 (source: 17000000FBD8B309)
+DS1985: 0B2BC5FB000000ED (source: ED000000FBC52B0B)
+DS1985: 0BB3D8FB0000006D (source: 6D000000FBD8B30B)
+DS1986: 0F2BC5FB00000019 (source: 19000000FBC52B0F)
+DS1986: 0FB3D8FB00000099 (source: 99000000FBD8B30F)
+DS1995: 0A2BC5FB000000D0 (source: D0000000FBC52B0A)
+DS1996: 0C2BC5FB0000005E (source: 5E000000FBC52B0C)
+Created: 26 April 2009
+Updated: 15 February 2017
+CRC-8/OPENSAFETY
+width=8 poly=0x2f init=0x00 refin=false refout=false xorout=0x00 check=0x3e residue=0x00 name="CRC-8/OPENSAFETY"
+Class: attested
+Ethernet POWERLINK Standardisation Group (16 October 2015), OpenSAFETY
+Safety Profile Specification Working Draft Proposal, version 1.5.0
+I Full description (Section 5.1.2.6, pp.44-5)
+I Error detection capability (Section 8.1, p.183)
+I Code: C (Appendix 1, pp.192-5)
+IV 1 codeword (Appendix 1, pp.192-3)
+23C8083411223344556677883C
+Roland Knall (6 February 2012), openSAFETY communication using Ethernet
+Powerlink V2 as transport protocol (PCAP file) (courtesy of Wireshark Wiki)
+II Transcript confirming implementation (selected codewords)
+02A806000060650006A11C
+03A80001000060650006A131
+03A806000060650007211D
+02A80001000060650007211D
+04A8060000606500021393
+05A800010000606500021350
+01AC0600006065000721AF
+00AC000300006065000721B5
+Prof. Philip Koopman, Tridib Chakravarty (June 2004), Cyclic Redundancy Code
+(CRC) Polynomial Selection for Embedded Networks
+III Assessment of polynomial performance (as 0x97 or C2)
+Unique effective solution of codeword set
+Created: 22 July 2016
+Updated: 1 September 2017
+CRC-8/ROHC
+width=8 poly=0x07 init=0xff refin=true refout=true xorout=0x00 check=0xd0 residue=0x00 name="CRC-8/ROHC"
+Class: academic
+IETF RFC 3095 (July 2001)
+I Definition: Width, Poly, Init, XorOut (Section 5.9.1, p.125)
+Andreas Vernersson et al. (26 May 2003), rohc 1.0 module rohc-1.0/rohc
+/src/c_util.c
+III Code: C
+Created: 14 December 2009
+Updated: 6 February 2017
+CRC-8/SAE-J1850
+width=8 poly=0x1d init=0xff refin=false refout=false xorout=0xff check=0x4b residue=0xc4 name="CRC-8/SAE-J1850"
+Class: attested
+SAE Standard J1850 (15 May 1994), Excerpt (courtesy of Michael Wolf,
+AVRFreaks)
+I Definition: Width, Poly, Init, XorOut, Residue (Section 5.4.1, p.14)
+IV 7 codewords (Table 1, p.15)
+0000000059
+F2018337
+0FAA005579
+00FF5511B8
+332255AABBCCDDEEFFCB
+926B558C
+FFFFFFFF74
+AUTOSAR (30 November 2016), AUTOSAR Classic Platform release 4.3,
+Specification of CRC Routines
+I Comprehensive primer on CRC theory (Section 7.1, pp.17-20)
+I All parameters (Section 7.2.1.1, p.22)
+IV 7 codewords (same as in SAE Standard J1850) (Section 7.2.1.1, p.22)
+"knivmannen" (24 May 2010), StackOverflow submitted question
+IV 5 codewords
+55FF0000ECFF601F
+55FF0000F0FFA038
+660BEAFFBFFFC0CA
+5E18EAFFB7FF60BD
+F6301600FCFE1081
+Unique effective solution of codeword set
+Created: 17 February 2016
+Updated: 15 February 2017
+CRC-8/WCDMA
+width=8 poly=0x9b init=0x00 refin=true refout=true xorout=0x00 check=0x25 residue=0x00 name="CRC-8/WCDMA"
+Class: third-party
+Andrew Richardson (17 March 2005), WCDMA Design Handbook, Cambridge
+University Press, ISBN 0-521-82815-5 (embedded content)
+III Definition: Width, Poly, Residue (Section 7.1.3, Table 7.3, p.223)
+III Shift register diagram (Figure 7.4, p.223)
+Prof. Philip Koopman, Tridib Chakravarty (June 2004), Cyclic Redundancy Code
+(CRC) Polynomial Selection for Embedded Networks
+III Assessment of polynomial performance (as 0xCD or WCDMA-8)
+"Max" (26 October 2009), Computer Interfacing Forum topic 1431
+IV 46 codewords (selection)
+00001148
+00012077
+80800012
+00001021010022000A002D000000000000460A20
+00001021010123000A0028000000000000460A54
+00001021010125000A0029000000000000460A4B
+400010200B01001A000A000100000000008009001F01F393
+400010200B01001F000A000100000000000009001F01F3F7
+400010200B010020000A000100000000000009001F01F331
+40001107083829B41903
+40001107084826682180
+40001107085C293417A8
+IV 1 non-matching codeword
+00001268 != ...8B
+Unique effective solution of codeword set
+Created: 8 November 2009
+Updated: 21 April 2017
+CRC-10
+width=10 poly=0x233 init=0x000 refin=false refout=false xorout=0x000 check=0x199 residue=0x000 name="CRC-10"
+Class: attested
+Used in Asynchronous Transfer Mode AAL 3/4 and OAM cells. Note there are 6
+padding zero bits between each of the 46-byte information fields and their
+respective CRCs.
+ITU-T Recommendation I.610 (February 1999)
+I Full mathematical description (Section 10.1, p.40)
+IV 2 codewords (Appendix I, p.67)
+116A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A
+6A6A6A6A6A6A6A6A6A6A6A6A6A6A00AF
+1801AAAAAAAAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6A6A6A6A6A6A6A6A6A6A
+6A6A6A6A6A6A6A6A6A6A6A6A6A6A02AC
+Broadband Forum Technical Committee (March 1999), Traffic Management
+Specification, version 2.1 (courtesy of Faculty of Information Technology, Brno
+University of Technology, Czech Republic)
+I Full mathematical description (Section 5.10.3.1, p.47)
+Charles M. Heard, Generating and Checking CRC-10 in ATM AAL 3/4 or OAM Cells
+(courtesy of the Internet Archive)
+III Definition: Width, Poly
+III Code: C
+IV 7 codewords (selection; first four attributed to Angie Tso,
+Telecommunications Techniques Corp.)
+0A0B0C0D0E0F0000000000000000000000000000000000000000000000000000
+000000000000000000000000000001F6
+1111111111111111111100000000000000000000000000000000000000000000
+0000000000000000000000000000016B
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF030F
+1234567890123456789012345678901234567890123456789012345678901234
+567890123456789012345678901202ED
+106A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A6A
+6A6A6A6A6A6A6A6A6A6A6A6A6A6A03B9
+180100000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000
+0000000000006A6A6A6A6A6A6A6A004A
+Created: 19 April 2009
+Updated: 6 February 2017
+CRC-10/CDMA2000
+width=10 poly=0x3d9 init=0x3ff refin=false refout=false xorout=0x000 check=0x233 residue=0x000 name="CRC-10/CDMA2000"
+Class: academic
+3rd Generation Partnership Project 2 (3GPP2) (October 2005), Physical layer
+standard for cdma2000 spread spectrum systems, revision D, version 2.0
+I Definition: Width, Poly (Section 2.1.3.1.4.1.3, p.2-90)
+I Full description (Section 2.1.3.1.4.1, p.2-89)
+I Shift register diagram (Figure 2.1.3.1.4.1.3-1, p.2-91)
+Agilent Technologies, Advanced Design System 2008 Update 2, CDMA2K_CRC_Coder
+module documentation (courtesy of the Internet Archive)
+III Full description
+Created: 14 October 2013
+Updated: 1 September 2017
+CRC-10/GSM
+width=10 poly=0x175 init=0x000 refin=false refout=false xorout=0x3ff check=0x12a residue=0x0c6 name="CRC-10/GSM"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 4.7, p.65)
+Created: 17 February 2017
+CRC-11
+width=11 poly=0x385 init=0x01a refin=false refout=false xorout=0x000 check=0x5a3 residue=0x000 name="CRC-11"
+Class: attested
+FlexRay Consortium (October 2010), FlexRay Communications System Protocol
+Specification, version 3.0.1 (courtesy of nlrp Benchmark)
+I Definition: Width, Poly, Init, RefOut (Section 4.2.8, pp.114-5)
+I Pseudocode (Section 4.5, pp.118-9)
+FlexRay Consortium (October 2010), FlexRay Protocol Conformance Test
+Specification, version 3.0.1 (courtesy of nlrp Benchmark)
+IV 1 codeword (Section 2.7.5, p.681)
+1100000000010000000100000100110
+Robert Bosch GmbH (3 December 2007), E-Ray FlexRay IP Module, Application
+Note - Wakeup
+IV 3 codewords (Section 4.4.3, pp.26-30; researched by Vivek Rajan)
+1100000000001000100000100011011
+1100000000010000100001100000100
+0000000000011000100010111010010
+Created: 3 November 2007
+Updated: 6 February 2017
+CRC-11/UMTS
+width=11 poly=0x307 init=0x000 refin=false refout=false xorout=0x000 check=0x061 residue=0x000 name="CRC-11/UMTS"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+3rd Generation Partnership Project (3GPP) TS 25.427 version 14.0.0 (March 2017)
+(zipped MS Word document) --- ETSI TS 125 427 version 14.0.0 (April 2017)
+I Definition: Width, Poly, Init, XorOut (Section 7.2.1, p.40)
+I Definition: RefIn, RefOut (Section 6.1.1, p.20; Section 7.2.1.1, pp.40-1)
+Created: 8 February 2016
+Updated: 1 September 2017
+CRC-12/CDMA2000
+width=12 poly=0xf13 init=0xfff refin=false refout=false xorout=0x000 check=0xd4d residue=0x000 name="CRC-12/CDMA2000"
+Class: academic
+3rd Generation Partnership Project 2 (3GPP2) (October 2005), Physical layer
+standard for cdma2000 spread spectrum systems, revision D, version 2.0
+I Definition: Width, Poly (Section 2.1.3.1.4.1.2, p.2-90)
+I Full description (Section 2.1.3.1.4.1, p.2-89)
+I Shift register diagram (Figure 2.1.3.1.4.1.2-1, p.2-90)
+Agilent Technologies, Advanced Design System 2008 Update 2, CDMA2K_CRC_Coder
+module documentation (courtesy of the Internet Archive)
+III Full description
+Created: 14 October 2013
+Updated: 1 September 2017
+CRC-12/DECT
+width=12 poly=0x80f init=0x000 refin=false refout=false xorout=0x000 check=0xf5b residue=0x000 name="CRC-12/DECT"
+Class: academic
+Alias: X-CRC-12
+ETSI EN 300 175-3 version 2.5.1 (August 2013)
+I Definition: Residue; full mathematical description (Section 6.2.5.4,
+pp.99-101)
+Created: 29 July 2010
+Updated: 15 February 2017
+CRC-12/GSM
+width=12 poly=0xd31 init=0x000 refin=false refout=false xorout=0xfff check=0xb34 residue=0x178 name="CRC-12/GSM"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 5.1.5.1.4, p.72 --- Section 5.1.6.1.4,
+p.75 --- Section 5.1.7.1.4, p.77 --- Section 5.1.8.1.4, p.78 --- Section 5.1.9.1.4,
+p.81 --- Section 5.1.10.1.4, p.85 --- Section 5.1.11.1.4, p.87 --- Section
+5.1.12.1.4, p.91 --- Section 5.1.13.1.4, p.93)
+Created: 17 February 2017
+CRC-12/UMTS
+width=12 poly=0x80f init=0x000 refin=false refout=true xorout=0x000 check=0xdaf residue=0x000 name="CRC-12/UMTS"
+Class: academic
+Alias: CRC-12/3GPP
+The crossed-endian definition is unusual but explicit. Researched by "markw_be" at
+the Computer Interfacing Forum.
+3rd Generation Partnership Project (3GPP) TS 25.212 version 14.0.0 (December
+2016) (zipped MS Word document) --- ETSI TS 125 212 version 14.0.0 (May 2017)
+I Mathematical description, defining Width, Poly, Init, Residue (Section 4.2.1.1,
+pp.19-20)
+I Attachment relation, defining RefIn ^ RefOut (Section 4.2.1.2, p.20)
+Created: 10 December 2009
+Updated: 5 September 2017
+CRC-13/BBC
+width=13 poly=0x1cf5 init=0x0000 refin=false refout=false xorout=0x0000 check=0x04fa residue=0x0000 name="CRC-13/BBC"
+Class: attested
+S. R. Ely, D. T. Wright, British Broadcasting Corporation (March 1982), L.F. Radiodata:
+specification of the BBC experimental transmissions 1982
+I Full mathematical description (Section 5.3, pp.4-5)
+I Definition of bit order (Section 5.2, p.4)
+I Worked example (as generator matrix) (Figure 10, p.10)
+IV 1 additional codeword (Appendix, p.10)
+17777777777762722 (octal)
+Created: 14 October 2013
+Updated: 6 February 2017
+CRC-14/DARC
+width=14 poly=0x0805 init=0x0000 refin=true refout=true xorout=0x0000 check=0x082d residue=0x0000 name="CRC-14/DARC"
+Class: attested
+The single codeword is supported by the codewords confirming CRC-6/DARC,
+defined identically apart from Poly in the same standard. The standard presents the
+codeword in transmission order, whereas the bytes of data are sent LSB first. The
+CRC mask is ...FF 3F.
+ETSI EN 300 751 version 1.2.1 (January 2003)
+I Definition: Width, Poly (Section 11.1, p.67)
+I Definition: RefIn, RefOut (Section 12, pp.69-70)
+IV 1 codeword (Section 11.1, p.67)
+02000102372050524F4A454354204D41494E4D454E553B08 (source: 40008040
+EC040A4AF252A2C22A04B2829272B2A272AADC10)
+See section 12 for details of the transmission order.
+Created: 14 December 2009
+Updated: 6 February 2017
+CRC-14/GSM
+width=14 poly=0x202d init=0x0000 refin=false refout=false xorout=0x3fff check=0x30ae residue=0x031e name="CRC-14/GSM"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 3.9.1.2, p.28 --- Section 3.9.5.2, p.40
+--- Section 3.10.1.2, p.42 --- Section 3.10.9.2, p.54)
+Created: 17 February 2017
+CRC-15
+width=15 poly=0x4599 init=0x0000 refin=false refout=false xorout=0x0000 check=0x059e residue=0x0000 name="CRC-15"
+Class: academic
+Robert Bosch GmbH (September 1991), CAN 2.0 Specification
+I Full definition (except Check) (Section 3.1.1, pp.13-14)
+I Pseudocode
+Created: 2 November 2007
+Updated: 6 February 2017
+CRC-15/MPT1327
+width=15 poly=0x6815 init=0x0000 refin=false refout=false xorout=0x0001 check=0x2566 residue=0x6815 name="CRC-15/MPT1327"
+Class: attested
+MX-COM reference from Koopman and Chakravarty (2004).
+UK Radiocommunications Agency (20 June 1997), MPT 1327: A signalling standard
+for trunked private land mobile radio systems, 3rd edition (courtesy of UK National
+Archives)
+I Full mathematical description (Section 3.2.3, p.3-3)
+I Error control properties (Appendix 2, p.A2-1)
+IV 1 codeword (Section 5.1.1, p.5-3; Appendix 3, p.A3-1)
+1010101010101010110001001101010000000000000000000000000000000001
+010101010101010110001001101011
+"whiteox11" (28 December 2011), "mpt1327 decoding" (courtesy of YouTube)
+(video, embedded content)
+II Transcript confirming implementation with 25 codewords (selection)
+100111111101001010110100111100111111101101000100010011110010110
+101010011100010101100000101000001101110001101100111010111011101
+100111111101000101001010011100100110100101011000100100101110000
+100110100100011111000100011010000000101010101010101111110011100
+101010111001011010110100001100100101111010100000110000100000100
+MX-COM, Inc. (17 August 1998), Error detection and correction of MPT1327
+formatted messages using MX429A or MX809 devices (courtesy of the Internet
+Archive)
+III Full mathematical description (Section 1.2.1, p.1)
+III Worked example (Section 1.2.2, p.2)
+III Code: C (Section 1.2.3, p.3)
+reveng -m CRC-15/MPT1327 -t -X -c 9FD2B4F3FB44 --> 4F2C
+Unique effective solution of codeword set
+Created: 16 July 2012
+Updated: 14 February 2017
+CRC-16/ARC
+width=16 poly=0x8005 init=0x0000 refin=true refout=true xorout=0x0000 check=0xbb3d residue=0x0000 name="CRC-16/ARC"
+Class: confirmed
+Alias: CRC-16, CRC-IBM, CRC-16/ARC, CRC-16/LHA
+System Enhancement Associates (24 October 1986), ARC 5.20
+II Implementation
+Haruyasu Yoshizaki (10 January 1996), LHA 2.55E
+II Implementation
+Rahul Dhesi (19 April 1996), ZOO 2.1a
+II Implementation
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation (CRC16_arc)
+Ross N. Williams (19 August 1993), "A Painless Guide to CRC Error Detection
+Algorithms"
+III All parameters (except Residue)
+Emil Lenchak, Texas Instruments, Inc. (November 2004), CRC Implementation With
+MSP430
+III All parameters (except Residue) (Section 4.6, p.6)
+Altera Corporation (April 1999), crc MegaCore Function Data Sheet, version 2
+(courtesy of the Internet Archive)
+III All parameters (except Residue) (p.6)
+Created: 30 March 2005
+Updated: 5 September 2017
+CRC-16/AUG-CCITT
+width=16 poly=0x1021 init=0x1d0f refin=false refout=false xorout=0x0000 check=0xe5cc residue=0x0000 name="CRC-16/AUG-CCITT"
+Class: attested
+Alias: CRC-16/SPI-FUJITSU
+Init value is equivalent to an augment of 0xFFFF prepended to the message.
+Fujitsu Semiconductor (10 October 2007), FlexRay ASSP MB88121B User's
+Manual
+I Definition: Width, Poly, Init (Section 2.5.1, p.153)
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Berndt M. Gammel (29 October 2006), Matpack 1.9.1 class MpCRC documentation
+III All parameters (except Residue)
+Created: 30 October 2007
+Updated: 6 February 2017
+CRC-16/BUYPASS
+width=16 poly=0x8005 init=0x0000 refin=false refout=false xorout=0x0000 check=0xfee8 residue=0x0000 name="CRC-16/BUYPASS"
+Class: attested
+Alias: CRC-16/VERIFONE, CRC-16/UMTS
+Reported for the multi-threaded portion of the Buypass transaction processing
+network.
+Verifone, Inc. (May 1995), TCLOAD Reference Manual (courtesy of the Internet
+Archive)
+I Definition: Poly. CRC byte order, implying RefIn and RefOut (Section 4,
+p.4-1)
+3rd Generation Partnership Project (3GPP) TS 25.427 version 14.0.0 (March 2017)
+(zipped MS Word document) --- ETSI TS 125 427 version 14.0.0 (April 2017)
+I Definition: Width, Poly, Init, XorOut (Section 7.2.1, p.40)
+I Definition: RefIn, RefOut (Section 6.1.1, p.20; Section 7.2.1.1, p.40)
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Emil Lenchak, Texas Instruments, Inc. (November 2004), CRC Implementation With
+MSP430
+III All parameters (except Residue) (Section 4.6, p.6)
+Thomas Schmidt, Microchip Technology Inc. (20 May 2000), "CRC Generating and
+Checking"
+III Description (p.4)
+III Shift register diagram (Figure 1, p.3)
+III Code: 16C54B assembler (Appendix A, pp.7-11; Appendix B, pp.12-22)
+Michael Niedermayer (29 July 2017), FFmpeg 3.3.3 (bzip2 compressed tarfile),
+module ffmpeg-3.3.3/libavutil/tests/crc.c
+IV 1 codeword
+1999 bytes (i+i*i) plus 1FBB
+"Joshua" (31 May 2008), Computer Interfacing Forum topic 530
+IV 2 codewords
+0384901B56
+03848400001230314131333030323031333030311C39303062BF
+Michael Junker (26 October 2009), Computer Interfacing Forum topic 1432
+IV 7 codewords (7-bit payload characters)
+01100110011101011000001100000110011001110101100001101000111010100
+(source: 331D3030331D30 + 53716)
+01101000011101011000001100000110011001110101100001111000111001001
+(source: 341D3030331D30 + 61897)
+01101010011101011000001100000110011001110101100000001000111001111
+(source: 351D3030331D30 + 04559)
+01101100011101011000001100000110011001110101100001011000111000000
+(source: 361D3030331D30 + 45504)
+01100110011101011010001100000110000001110101100000101000111000110
+(source: 331D3430301D30 + 20934)
+01100110011101011000001100000111001001110101100001101000111110110
+(source: 331D3030391D30 + 53750)
+01100010011101011000001100010110000001110101100000001001101010001
+(source: 311D3031301D30 + 04945)
+Unique effective solution of codeword set
+Created: 4 June 2008
+Updated: 1 September 2017
+CRC-16/CCITT-FALSE
+width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0x0000 check=0x29b1 residue=0x0000 name="CRC-16/CCITT-FALSE"
+Class: attested
+An algorithm commonly misidentified as CRC-CCITT. For the true CCITT algorithm
+see KERMIT. For the later ITU-T algorithm see X.25.
+AUTOSAR (30 November 2016), AUTOSAR Classic Platform release 4.3,
+Specification of CRC Routines
+I Comprehensive primer on CRC theory (Section 7.1, pp.17-20)
+I All parameters (Section 7.2.2.1, pp.23-4)
+IV 7 codewords (Section 7.2.2.1, p.24)
+0000000084C0
+F20183D374
+0FAA00552023
+00FF5511B8F9
+332255AABBCCDDEEFFF53F
+926B550745
+FFFFFFFF1D0F
+Western Digital Corporation (May 1980), FD 179X-02 datasheet (courtesy of
+Bitsavers)
+I Definition: Width, Poly, Init (p.5)
+Floppy disc formats: IBM 3740 (FM, e.g. Acorn DFS), ISO/IEC 8860-2:1987
+(DOS 720K), ISO/IEC 9529-2:1989 (DOS 1.4M)
+II Implementation
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Ross N. Williams (19 August 1993), "A Painless Guide to CRC Error Detection
+Algorithms"
+III All parameters (except Check, Residue)
+Berndt M. Gammel (29 October 2006), Matpack 1.9.1 class MpCRC documentation
+III All parameters (except Residue)
+Altera Corporation (April 1999), crc MegaCore Function Data Sheet, version 2
+(courtesy of the Internet Archive)
+III All parameters (except Residue) (p.6)
+Unique effective solution of codeword set
+Created: 30 March 2005
+Updated: 5 September 2017
+CRC-16/CDMA2000
+width=16 poly=0xc867 init=0xffff refin=false refout=false xorout=0x0000 check=0x4c06 residue=0x0000 name="CRC-16/CDMA2000"
+Class: academic
+3rd Generation Partnership Project 2 (3GPP2) (October 2005), Physical layer
+standard for cdma2000 spread spectrum systems, revision D, version 2.0
+I Definition: Width, Poly (Section 2.1.3.1.4.1.1, p.2-89)
+I Full description (Section 2.1.3.1.4.1, p.2-89)
+I Shift register diagram (Figure 2.1.3.1.4.1.1-1, p.2-90)
+Agilent Technologies, Advanced Design System 2008 Update 2, CDMA2K_CRC_Coder
+module documentation (courtesy of the Internet Archive)
+III Full description
+Created: 14 October 2013
+Updated: 1 September 2017
+CRC-16/CMS
+width=16 poly=0x8005 init=0xffff refin=false refout=false xorout=0x0000 check=0xaee7 residue=0x0000 name="CRC-16/CMS"
+Class: third-party
+Dainius Simelevicius, Remi K. Mommsen et al. (16 December 2016), CERN CMS
+Online Software (XDAQ) release 14, Event Builder source package (RPM package),
+files daq/evb/include/evb/CRCCalculator.h, daq/evb/src/common/CRCCalculator.cc
+III All parameters (except Residue)
+III Code: C++
+"movilstore" (24 January 2011), Computer Interfacing Forum topic 1650
+III Reference to application of algorithm on Samsung mobiles
+IV 5 codewords
+0200080078110000F00F0000F7E0
+020008005B110000F00F00004725
+0200080050110000F00F0000F71F
+0200080024110000F00F00003636
+02000800A6100000F00F0000141A
+"xtrusion" (28 November 2010), Computer Interfacing Forum topic 1627
+IV 12 codewords
+0200080034100000B0090000B725
+0200080029100000B0090000E76E
+0200080002100000B0090000D79B
+0200080005100000B0090000A789
+0200080078100000B0090000F696
+00050900000000003030303000D55E
+01000400051000003793
+0200080034100000F00F00003740
+0200080029100000F00F0000670B
+0200080002100000F00F000057FE
+0200080005100000F00F000027EC
+0200080078100000F00F000076F3
+"Robert" ("xtrusion") (25 December 2010), Computer Interfacing Forum topic 1636
+IV 5 codewords
+02000C00301000009A01000000000000837B
+02000C00301000009A0100009A0100004B55
+02000C00301000009A01000034030000934E
+02000C00301000009A010000CE0400005B09
+02000C00301000009A01000068060000A311
+Unique effective solution of codeword set
+Created: 13 July 2016
+Updated: 5 September 2017
+CRC-16/DDS-110
+width=16 poly=0x8005 init=0x800d refin=false refout=false xorout=0x0000 check=0x9ecf residue=0x0000 name="CRC-16/DDS-110"
+Class: attested
+Used in the ELV DDS 110 function generator. Init value is equivalent to an augment
+of 0xFFFF prepended to the message.
+ELV Elektronik AG (March 2008), Software-Schnittstelle der Funktionsgeneratoren
+DDS 10/DDS 110 (in German; courtesy of the Internet Archive)
+I Definition: Width, Poly, CRC byte order (p.67)
+IV 1 codeword (escaped according to the text) (p.67)
+0200108200731082F7FE (source: 02000200731082FEF7)
+"wortel", "Gammatester" (19 July 2009), Computer Interfacing Forum topic 1372
+III All parameters (except Check, Residue) ("Gammatester")
+IV 3 codewords ("wortel")
+02001082007800ED96
+020010820078016D93
+020005006600057A586435
+Unique effective solution of codeword set
+Created: 30 November 2009
+Updated: 6 February 2017
+CRC-16/DECT-R
+width=16 poly=0x0589 init=0x0000 refin=false refout=false xorout=0x0001 check=0x007e residue=0x0589 name="CRC-16/DECT-R"
+Class: attested
+Alias: R-CRC-16
+Used in DECT A-fields.
+ETSI EN 300 175-3 version 2.5.1 (August 2013)
+I Full mathematical description (Section 6.2.5.2, p.99)
+I Performance of polynomial (Annex B, p.297)
+Thomas Pircher (6 January 2016), pycrc 0.9
+II Implementation
+Pavel Yazev (9 September 2015), gr-dect2 module gr-dect2/lib
+/packet_decoder_impl.cc
+III Code: C++
+Created: 7 December 2009
+Updated: 6 February 2017
+CRC-16/DECT-X
+width=16 poly=0x0589 init=0x0000 refin=false refout=false xorout=0x0000 check=0x007f residue=0x0000 name="CRC-16/DECT-X"
+Class: attested
+Alias: X-CRC-16
+The single codeword is supported by the implementation confirming CRC-16/DECTR,
+defined identically apart from XorOut in the same standard. Used in DECT
+B-fields.
+ETSI EN 300 175-3 version 2.5.1 (August 2013)
+I Definition: Residue; full mathematical description (Section 6.2.5.4,
+pp.99-101)
+I Performance of polynomial (Annex B, p.297)
+"user521925" (27 November 2010), StackOverflow submitted question
+IV 1 codeword
+A37029
+Created: 30 July 2010
+Updated: 15 February 2017
+CRC-16/DNP
+width=16 poly=0x3d65 init=0x0000 refin=true refout=true xorout=0xffff check=0xea82 residue=0x66c5 name="CRC-16/DNP"
+Class: confirmed
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+Created: 2 November 2007
+Updated: 6 February 2017
+CRC-16/EN-13757
+width=16 poly=0x3d65 init=0x0000 refin=false refout=false xorout=0xffff check=0xc2b7 residue=0xa366 name="CRC-16/EN-13757"
+Class: confirmed
+Used in the Wireless M-Bus protocol for remote meter reading.
+STACKFORCE GmbH (2014), Capt(2)web sniffer, wireless M-Bus monitor
+II Transcripts confirming implementation with at least 124 codewords
+(selection)
+EE449ACE010000802307AABC
+7A4700E0A535E79CFAA94D07B173BC101496
+021CCB0127DCF516FF4EA8BC0A4851744D3D
+438A680ECFC8EAA7F5D6476CAD938EBF88AF
+259794C336C6FE9601D99F81B5EBDD9F36B5
+67FC406AA1107F380CA349EB2F1AD57AD22A
+7D8067CD9D1076
+D0F1E6C2C3962E
+384BABA953BCE5
+70414545C59920
+F0649A4E111111110000E9CA
+A12F2F2F2F2F2F2F2F2F2F2F2F2F2F2F4A08
+2F2F2F2F2F2F2F2F2F2F2F2F2F2F2F2F63D7
+7A8D00E0A503B1922864C36F29B37AF0646A
+D1391E979A44C456786CBB99CD6ECAACB373
+In the Web interface packet view, the bytes of the A and M fields are displayed
+in reverse, compared to transmission order.
+Patrick Seem, Texas Instruments, Inc. (23 October 2008), AN067: Wireless MBUS
+Implementation with CC1101 and MSP430
+III Definition: Width, Poly, Init, XorOut (Section 5.4, p.9)
+III Describes synchronous transfer with MSBs sent first, implying RefIn and
+RefOut (Sections 7.2.1, 7.3.1, pp.13-14)
+Dr.-Ing. Thomas Weinzierl, Weinzierl Engineering GmbH (July 2005), Stack
+Implementation for KNX-RF (courtesy of the Internet Archive)
+III Definition: Poly (Section 2.3, p.3)
+III CRC byte order, implying RefIn and RefOut (Section 2.3, p.2, etc.)
+Radio link corresponds to Link A in AN067 (Section 2.2, p.2 vs. AN067 table 3,
+p.6)
+"Tim" (6 June 2004), Control.com forum post
+III Width, Poly cited for ISO/IEC 60870-5-2
+"MarcPo", "Gammatester" (30 September 2008), Computer Interfacing Forum topic
+925
+III All parameters (except Check, Residue) ("Gammatester")
+IV 1 codeword ("MarcPo")
+780B134365871E6D
+"Chris P." (27 April 2009), Computer Interfacing Forum topic 1315
+IV 1 codeword
+07400001AAAA0000363E
+Unique effective solution of codeword set
+Created: 1 October 2008
+Updated: 5 September 2017
+CRC-16/GENIBUS
+width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0xffff check=0xd64e residue=0x1d0f name="CRC-16/GENIBUS"
+Class: attested
+Alias: CRC-16/EPC, CRC-16/I-CODE, CRC-16/DARC
+Used in standardised RFID tags. Presented high byte first.
+EPCglobal Inc(TM) (24 April 2015), UHF Class 1 Gen 2: Air Interface Protocol
+Standard version 2.0.1
+I Definition: Width, Poly, Init, Residue (Table 6.11, p.37)
+I Definition: RefIn, RefOut, Residue (Annex F.2, pp.139-40)
+I Definition: XorOut (Section 6.3.1.5, p.37; Annex F.2, p.139)
+I Shift register circuit diagram (Figure F.2, p.140)
+I Transmission order, implying RefIn and RefOut (Section 6.3.1.4, p.37)
+IV 7 codewords (Table F.2, p.140)
+0000E2F0
+08001111CCAE
+100011112222968F
+180011112222333378F6
+20001111222233334444C241
+2800111122223333444455552A91
+30001111222233334444555566661835
+Philips Semiconductors (30 January 2004), SL2 ICS11 Product Specification,
+revision 3.0 (courtesy of the Internet Archive)
+I Definition: Width, Poly, Init, Residue (Section 10.2, p.26)
+I Code: C (Section 10.3.2, pp.30-32)
+I Worked example (as code trace) (Section 10.3.2, p.32)
+ETSI EN 300 751 version 1.2.1 (January 2003)
+I Definition: Width, Poly (Section 11.2.5, p.68)
+IV 1 codeword (Section 11.2.5, p.68)
+402141424387F5
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+"Geert" (7 December 2007), Computer Interfacing Forum topic 216
+III Quoted definition for GENIbus: Width, Poly, Init, XorOut
+IV 2 codewords cited for GENIbus
+100120020C823E003982150064820900FA910A
+07200102C302101A901C
+Scott McLaughlin (24 September 2008), Computer Interfacing Forum topic 907
+III Reported definition for TI Tag-It: full (except Check)
+IV 4 codewords cited for TI Tag-It
+0000000001000000000101100011110010111
+0000000001010000000000000000110001011000110100000001011011010001
+11001
+1100000001010000000000000000011000101100011010000000100000010001
+1111001001111011010001011100000011000001
+0000000101010000000000000000110001011000110100000001100000111000
+0000010101010101010101100010011000111
+Unique effective solution of codeword set
+Created: 2 November 2007
+Updated: 1 September 2017
+CRC-16/GSM
+width=16 poly=0x1021 init=0x0000 refin=false refout=false xorout=0xffff check=0xce3c residue=0x1d0f name="CRC-16/GSM"
+Class: academic
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 5.1.2.2, p.67 --- Section 5.1.3.2, p.69
+--- Section 5.1.4.2, p.70)
+Created: 17 February 2017
+CRC-16/LJ1200
+width=16 poly=0x6f63 init=0x0000 refin=false refout=false xorout=0x0000 check=0xbdf4 residue=0x0000 name="CRC-16/LJ1200"
+Class: third-party
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+Used in the LoJack vehicle tracking system.
+Dennis Sheirer (24 January 2015), SDRTrunk module sdrtrunk/src
+/edac/CRCLJ.java
+III Code: Java
+III Worked example (as generator matrix)
+Created: 20 February 2016
+Updated: 6 February 2017
+CRC-16/MAXIM
+width=16 poly=0x8005 init=0x0000 refin=true refout=true xorout=0xffff check=0x44c2 residue=0xb001 name="CRC-16/MAXIM"
+Class: attested
+Maxim Integrated (8 August 2012), DS1921G Datasheet
+I Definition: Width, Poly, Init, XorOut (p.32)
+I Shift register diagram (p.34)
+Maxim Integrated (22 August 2012), Application Note 27 (PDF, HTML)
+I Definition: Init (p.10)
+I Shift register diagram (p.11)
+I Code: 8051 assembler (pp.12-16)
+I Worked example (p.15)
+Created: 26 April 2009
+Updated: 6 February 2017
+CRC-16/MCRF4XX
+width=16 poly=0x1021 init=0xffff refin=true refout=true xorout=0x0000 check=0x6f91 residue=0x0000 name="CRC-16/MCRF4XX"
+Class: attested
+Youbok Lee, PhD, Microchip Technology Inc. (16 July 2001), "CRC Algorithm for
+MCRF45X Read/Write Device"
+I Definition: Width, Poly (reverse form) (p.1)
+I Shift register diagram (p.1)
+I Flowchart (p.2)
+I Worked example (p.3)
+I Code: C (pp.4-5)
+Piers Desrochers, PICList MassMind, "A quick guide to CRC"
+III Description
+III Worked example
+William H. Press, Brian P. Flannery, Saul A. Teukolsky, William T. Vetterling (1992),
+Numerical recipes in C: The art of scientific computing, 2nd ed., Cambridge
+University Press, ISBN 0-521-43108-5 (embedded content)
+III All parameters (except Check) (p.898)
+III Code: C (pp.900-1)
+IV 2 codewords (p.898)
+54261B
+4361744D6F7573653938373635343332316EF5
+"kilobravo" (16 June 2008), Computer Interfacing Forum topic 578
+IV 2 codewords
+3A7164D9
+3A916A3E
+Unique effective solution of codeword set
+Created: 18 January 2008
+Updated: 15 February 2017
+CRC-16/OPENSAFETY-A
+width=16 poly=0x5935 init=0x0000 refin=false refout=false xorout=0x0000 check=0x5d38 residue=0x0000 name="CRC-16/OPENSAFETY-A"
+Class: attested
+The single codeword is supported by the codewords confirming
+CRC-8/OPENSAFETY, defined identically apart from Width, Poly in the same
+standard.
+Ethernet POWERLINK Standardisation Group (16 October 2015), OpenSAFETY
+Safety Profile Specification Working Draft Proposal, version 1.5.0
+I Full description (Section 5.1.2.6, pp.44-5)
+I Error detection capability (Section 8.1, p.183)
+I Code: C (Appendix 1, pp.192-5)
+IV 1 codeword (Appendix 1, pp.192-3)
+23C8083411223344556677880374
+Prof. Philip Koopman, Tridib Chakravarty (June 2004), Cyclic Redundancy Code
+(CRC) Polynomial Selection for Embedded Networks
+III Assessment of polynomial performance (as 0xAC9A or C3)
+Created: 22 July 2016
+Updated: 3 September 2017
+CRC-16/OPENSAFETY-B
+width=16 poly=0x755b init=0x0000 refin=false refout=false xorout=0x0000 check=0x20fe residue=0x0000 name="CRC-16/OPENSAFETY-B"
+Class: attested
+The single codeword is supported by the codewords confirming
+CRC-8/OPENSAFETY, defined identically apart from Width, Poly in the same
+standard.
+Ethernet POWERLINK Standardisation Group (16 October 2015), OpenSAFETY
+Safety Profile Specification Working Draft Proposal, version 1.5.0
+I Full description (Section 5.1.2.6, pp.44-5)
+I Error detection capability (Section 8.1, p.183)
+I Code: C (Appendix 1, pp.192-5)
+IV 1 codeword (Appendix 1, pp.192-3)
+22C812563011223344556677887031
+Prof. Philip Koopman, Tridib Chakravarty (June 2004), Cyclic Redundancy Code
+(CRC) Polynomial Selection for Embedded Networks
+III Assessment of polynomial performance (as 0xBAAD)
+Created: 22 July 2016
+Updated: 3 September 2017
+CRC-16/PROFIBUS
+width=16 poly=0x1dcf init=0xffff refin=false refout=false xorout=0xffff check=0xa819 residue=0xe394 name="CRC-16/PROFIBUS"
+Class: attested
+Alias: CRC-16/IEC-61158-2
+PROFIBUS International (March 1998), PROFIBUS Specification, Normative Parts,
+Edition 1.0, Part 9 (courtesy of Kuebler Group) --- PROFIBUS (in Chinese; courtesy of PUDN)
+I Transmission order, implying RefIn and RefOut (Part 9 Section 8.5.1, p.902)
+I Definition: Width, Poly, Init, Residue (Part 9 Section 8.8.4, pp.905-7)
+I Properties of polynomial (Part 9 Section 8.8.4, p.906)
+"Chetanya" (17 November 2011), Computer Interfacing Forum topic 1752
+III Definition: Width, Poly, Init
+IV 5 codewords
+34AF21
+011057E0
+321000E37E82
+331000E32A0F
+2611010000080A109739
+Unique effective solution of codeword set
+Created: 5 July 2016
+Updated: 6 February 2017
+CRC-16/RIELLO
+width=16 poly=0x1021 init=0xb2aa refin=true refout=true xorout=0x0000 check=0x63d0 residue=0x0000 name="CRC-16/RIELLO"
+Class: third-party
+Reported for a Riello Dialog UPS.
+"Snamprogetti" (17 April 2009), Computer Interfacing Forum topic 1305
+III Definition: Width, Poly, Init
+III Algorithm reported to be CRC-CCITT, implying RefIn and RefOut.
+IV 1 codeword
+2022525330308790
+Created: 18 April 2009
+Updated: 6 February 2017
+CRC-16/T10-DIF
+width=16 poly=0x8bb7 init=0x0000 refin=false refout=false xorout=0x0000 check=0xd0db residue=0x0000 name="CRC-16/T10-DIF"
+Class: attested
+Used in the SCSI Data Integrity Field. XorOut = 0xBADB is proposed to mark known
+bad blocks.
+Gerald Houlder, INCITS Technical Committee T10 (2 May 2003), End-to-End Data
+Protection Proposal
+I Definition: Poly, Init (p.6)
+I Shift register diagram (p.18)
+George O. Penokie, INCITS Technical Committee T10 (22 October 2003), Simplified
+End-to-End Data Protection
+I Definition: Residue; full mathematical description (Sections 4.5.3-4.5.4,
+pp.4-5)
+IV 5 codewords (Section 4.5.6, p.6)
+0000000000000000000000000000000000000000000000000000000000000000
+0000
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+A293
+000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F
+0224
+FFFF000000000000000000000000000000000000000000000000000000000000
+21B8
+FFFEFDFCFBFAF9F8F7F6F5F4F3F2F1F0EFEEEDECEBEAE9E8E7E6E5E4E3E2E1E0
+A0B7
+Ralph Weber, John Lohmeyer, INCITS Technical Committee T10 (20 August 2003),
+Minutes of Data Integrity Study Group - Aug 19-20, 2003
+I Definition: Init, XorOut (Item 4.6, p.3)
+I Acceptance of previous two documents (Item 4.7, p.3)
+Pat Thaler, INCITS Technical Committee T10 (28 August 2003), 16-bit CRC
+polynomial selection
+I Properties of polynomial
+Martin K. Petersen, Oracle Corporation (2007); Tim Chen, Intel Corporation (2013),
+Linux module crypto/crct10dif_common.c
+III Code: C
+Created: 29 September 2009
+Updated: 28 February 2017
+CRC-16/TELEDISK
+width=16 poly=0xa097 init=0x0000 refin=false refout=false xorout=0x0000 check=0x0fb3 residue=0x0000 name="CRC-16/TELEDISK"
+Class: confirmed
+Used in the Teledisk disc archive format. DECnet and CRCK allegedly use a Sicktype
+algorithm but with this polynomial.
+Will Kranz (8 December 2002), wteledsk 1.01
+II Implementation
+Will Kranz (8 December 2002), wteledsk 1.01 module tdcrc.c
+III Code: C
+Created: 10 December 2009
+Updated: 6 February 2017
+CRC-16/TMS37157
+width=16 poly=0x1021 init=0x89ec refin=true refout=true xorout=0x0000 check=0x26b1 residue=0x0000 name="CRC-16/TMS37157"
+Class: attested
+Texas Instruments, Inc. (November 2009), TMS37157 datasheet
+I Full definition (except Check) (pp.39-40)
+I Shift register diagram (Figure 51, p.39)
+I Flowchart (Figure 52, p.40)
+"harper", "jacknad" (November 2010-January 2011), StackOverflow submitted
+question and answers
+III Definition: Init (reverse form) ("harper")
+III Code: C ("jacknad")
+IV 3 codewords ("harper")
+0225A6
+024000000000A060E7
+024100000000A46FA5
+"Petri" (4 May 2010), Texas Instruments, Inc. E2E(TM) Community forum post
+IV 1 codeword
+01AAAAAAAAAADC25AB
+Unique effective solution of codeword set
+Created: 17 April 2011
+Updated: 6 February 2017
+CRC-16/USB
+width=16 poly=0x8005 init=0xffff refin=true refout=true xorout=0xffff check=0xb4c8 residue=0xb001 name="CRC-16/USB"
+Class: third-party
+CRC appended low byte first.
+Anonymous (10 July 1997), "Cyclic Redundancy Checks in USB" (Draft) (courtesy
+of the Internet Archive)
+III Definition: Width, Poly, Init, XorOut (p.2)
+III Definition: Residue (p.3)
+III Code: Perl (p.4)
+IV 2 codewords (p.6)
+00010203EF7A
+234567890E1C
+Created: 1 December 2007
+Updated: 6 February 2017
+CRC-16/A
+width=16 poly=0x1021 init=0xc6c6 refin=true refout=true xorout=0x0000 check=0xbf05 residue=0x0000 name="CRC-16/A"
+Class: attested
+Used in contactless IC cards.
+ISO/IEC FCD 14443-3 (24 November 2008)
+I Definition: Init, XorOut (Section 6.2.4, p.11)
+I Citation for rest of algorithm: ISO/IEC 13239 (see X.25)
+IV 2 codewords (Annex B.1, p.49)
+0000A01E
+123426CF
+Created: 30 April 2011
+Updated: 6 February 2017
+CRC-16/KERMIT
+width=16 poly=0x1021 init=0x0000 refin=true refout=true xorout=0x0000 check=0x2189 residue=0x0000 name="CRC-16/KERMIT"
+Class: attested
+Alias: CRC-16/CCITT, CRC-16/CCITT-TRUE, CRC-CCITT
+Press et al. identify the CCITT algorithm with the one implemented in Kermit. V.41 is
+endianness-agnostic, referring only to bit sequences, but the CRC appears reflected
+when used with LSB-first modems. Ironically, the unreflected form is used in
+XMODEM.
+For the algorithm often misidentified as CCITT, see CCITT-FALSE. For the later
+ITU-T algorithm see X.25.
+ITU-T Recommendation V.41 (November 1988)
+I Definition: Residue; full mathematical description (Section 2, p.2)
+I Shift register diagrams (Appendix I, p.9)
+Frank da Cruz (June 1986), Kermit Protocol Manual, Sixth Edition (plain text)
+I Full definition (except Check) (Section 6.3)
+I Pseudocode (Section 6.3)
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Aviation Data Systems (Aust) Pty Ltd. (13 June 2006), PC.ACARS-G ACARS client
+(PADS presentation) (courtesy of the Internet Archive)
+II Transcripts confirming implementation with 10 codewords
+43AED6C8ADD651431551B03102D332B9C1D651313732B583F303
+6DAEB9CDADCD524F15C1C154022FCD454C43C1D9C1AEC15431AEB9CDADCD524F
+32B0B93446C2C13443B0B3B9B946834861
+CDAEB9CDADCD524F54DF7F3802D33231C1CDC8B03134388361A7
+6D8080808080808015D3518002B0B058D3838236
+CDAEB9CDADCD524F15C2C1B9024CB032C1CDC8B03134382FCD454C43C1D9C1AE
+C15431AEB9CDADCD524FC1B0B9B531323443B3C4B9B0B3C2C1B53131C2B9B0B0
+C143B53437313443B0C437C134B6B54334C1C432B6B9B5B5C14343433445B9C1
+3831B543383132343446C131B332B0B934B9B0B3B3C1B0454534C438374643B3
+834483
+6DAEB9CDADCD524FB9DF7FD58391C6
+43AED6C8ADDA5843D50DD0C1524954D920BF8397AC
+43AED6C8ADDA584315C831BC0DD0C1524954D920BF8302D5
+32AED6C8ADDA58C21538313702CD31B3C15146B034B3B90D8ACDD6C10D8A5146
+C1B034B3B92F31B0AED6C8DA58C2AECD454C200D8AC1C1B0B531372020202020
+83751B
+6DAEB9D6ADD3CD57B5DF7F4A839BC6
+Andrew Richardson (17 March 2005), WCDMA Design Handbook, Cambridge
+University Press, ISBN 0-521-82815-5 (embedded content)
+III Definition: Width, Poly, Residue (Section 7.1.3, Table 7.3, p.223)
+III Shift register diagram (Figure 7.4, p.223)
+William H. Press, Brian P. Flannery, Saul A. Teukolsky, William T. Vetterling (1992),
+Numerical recipes in C: The art of scientific computing, 2nd ed., Cambridge
+University Press, ISBN 0-521-43108-5 (embedded content)
+III All parameters (except Check) (p.898)
+III Code: C (pp.900-1)
+IV 2 codewords (p.898)
+54A114
+4361744D6F7573653938373635343332318DC2
+Unique effective solution of codeword set
+Created: 10 September 2005
+Updated: 15 February 2017
+CRC-16/MODBUS
+width=16 poly=0x8005 init=0xffff refin=true refout=true xorout=0x0000 check=0x4b37 residue=0x0000 name="CRC-16/MODBUS"
+Class: attested
+CRC presented low byte first.
+MODICON Inc. (June 1996), Modbus Protocol Reference Guide, Rev. J
+I Algorithm (pp.112-3)
+I Code: C (pp.113-5)
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+Ondrej Karas (28 February 2006), CRC calculator
+II Implementation
+Panu-Kristian Poiksalo (28 February 2003), Control.com forum post
+III Code: ObjectPascal
+Created: 27 February 2007
+Updated: 5 September 2017
+CRC-16/X-25
+width=16 poly=0x1021 init=0xffff refin=true refout=true xorout=0xffff check=0x906e residue=0xf0b8 name="CRC-16/X-25"
+Class: attested
+Alias: CRC-16/IBM-SDLC, CRC-16/ISO-HDLC, CRC-B
+HDLC is defined in ISO/IEC 13239. CRC_B is defined in ISO/IEC 14443-3.
+ITU-T Recommendation T.30 (September 2005)
+I Definition: Residue; full mathematical description (Section 5.3.7, p.78)
+ITU-T Recommendation V.42 (March 2002)
+I Definition: Residue; full mathematical description (Section 8.1.1.6.1, p.17)
+ITU-T Recommendation X.25 (October 1996)
+I Definition: Residue; full mathematical description (Section 2.2.7.4, p.9)
+IV 4 codewords (Appendix I, p.145)
+033F5BEC
+01738357
+013FEBDF
+03733364
+IETF RFC 1331 (May 1992)
+I Code: C (Appendix B, pp.61-3)
+William H. Press, Brian P. Flannery, Saul A. Teukolsky, William T. Vetterling (1992),
+Numerical recipes in C: The art of scientific computing, 2nd ed., Cambridge
+University Press, ISBN 0-521-43108-5 (embedded content)
+III All parameters (except Check) (p.898)
+III Code: C (pp.900-1)
+IV 2 codewords (p.898)
+54D9E4 (source: 54261B)
+4361744D6F757365393837363534333231910A (source: 4361744D6F757365
+3938373635343332316EF5)
+Berndt M. Gammel (29 October 2006), Matpack 1.9.1 class MpCRC documentation
+III All parameters (except Residue)
+ISO/IEC FCD 14443-3 (24 November 2008)
+IV 3 codewords (Annex B.2, p.50)
+000000CCC6
+0FAAFFFCD1
+0A1234562CF6
+Unique effective solution of codeword set
+Created: 10 September 2005
+Updated: 15 February 2017
+CRC-16/XMODEM
+width=16 poly=0x1021 init=0x0000 refin=false refout=false xorout=0x0000 check=0x31c3 residue=0x0000 name="CRC-16/XMODEM"
+Class: attested
+Alias: ZMODEM, CRC-16/ACORN, CRC-16/LTE
+The MSB-first form of the V.41 algorithm. For the LSB-first form see KERMIT. CRC
+presented high byte first.
+Used in the MultiMediaCard interface. In XMODEM and Acorn MOS the message
+bits are processed out of transmission order, compromising the guarantees on burst
+error detection.
+ITU-T Recommendation V.41 (November 1988)
+I Definition: Residue; full mathematical description (Section 2, p.2)
+I Shift register diagrams (Appendix I, p.9)
+3rd Generation Partnership Project (3GPP) TS 36.212 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 212 version 14.3.0 (July 2017)
+I Definition: Width, Poly, Init, XorOut, Residue (Section 5.1.1, p.10)
+I Attachment relation, defining RefIn ^ RefOut (Section 5.1.1, p.10)
+3rd Generation Partnership Project (3GPP) TS 36.321 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 321 version 14.3.0 (July 2017)
+Referenced from TS 136 212 section 5.2.2.1, p.23
+I Definition: RefIn, RefOut (Section 6.1.1, pp.67-8)
+JEDEC Standard JESD84-A441 (March 2010) (registration required)
+I Full definition (Section 10.2, pp.157-8)
+I Shift register diagram (Figure 54, p.159)
+Acorn Computers Ltd (October 1984), BBC Microcomputer User Guide
+I Pseudocode (Chapter 35, p.369)
+Ward Christensen, Keith Petersen et al. (8 June 1982), XMODEM 5.0
+II Implementation (attributed to Paul Hansknecht)
+Acorn Computers Ltd (1981), Acorn MOS 1.20 (BBC Micro cassette format)
+II Implementation
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Berndt M. Gammel (29 October 2006), Matpack 1.9.1 class MpCRC documentation
+III All parameters (except Residue)
+Altera Corporation (April 1999), crc MegaCore Function Data Sheet, version 2
+(courtesy of the Internet Archive)
+III All parameters (except Residue) cited for ZMODEM (p.6)
+William H. Press, Brian P. Flannery, Saul A. Teukolsky, William T. Vetterling (1992),
+Numerical recipes in C: The art of scientific computing, 2nd ed., Cambridge
+University Press, ISBN 0-521-43108-5 (embedded content)
+III All parameters (except Check) (p.898)
+III Code: C (pp.900-1)
+IV 2 codewords (p.898)
+541A71
+4361744D6F757365393837363534333231E556
+Created: 30 March 2005
+Updated: 3 September 2017
+CRC-17/CAN-FD
+width=17 poly=0x1685b init=0x00000 refin=false refout=false xorout=0x00000 check=0x04f03 residue=0x00000 name="CRC-17/CAN-FD"
+Class: academic
+Robert Bosch GmbH (17 April 2012), CAN with Flexible Data-Rate: Specification,
+version 1.0 (courtesy of the Internet Archive)
+I Full definition (except Check); pseudocode (Section 3.2.1, pp.13-4)
+Created: 20 June 2017
+CRC-21/CAN-FD
+width=21 poly=0x102899 init=0x000000 refin=false refout=false xorout=0x000000 check=0x0ed841 residue=0x000000 name="CRC-21/CAN-FD"
+Class: academic
+Robert Bosch GmbH (17 April 2012), CAN with Flexible Data-Rate: Specification,
+version 1.0 (courtesy of the Internet Archive)
+I Full definition (except Check); pseudocode (Section 3.2.1, pp.13-4)
+Robert Bosch GmbH (23 December 2011), CRC for CAN with flexible data rate
+(CAN FD)
+I Error control properties; theory of polynomial construction (Section 2, p.1;
+Section 3, p.2)
+Created: 20 June 2017
+CRC-24
+width=24 poly=0x864cfb init=0xb704ce refin=false refout=false xorout=0x000000 check=0x21cf02 residue=0x000000 name="CRC-24"
+Class: attested
+Alias: CRC-24/OPENPGP
+IETF RFC 4880 (November 2007)
+I Definition: Width, Poly, Init (Section 6, p.53)
+I Code: C (Section 6.1, p.54)
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Berndt M. Gammel (29 October 2006), Matpack 1.9.1 class MpCRC documentation
+III All parameters (except Residue)
+Created: 2 November 2007
+Updated: 6 February 2017
+CRC-24/BLE
+width=24 poly=0x00065b init=0x555555 refin=true refout=true xorout=0x000000 check=0xc25a56 residue=0x000000 name="CRC-24/BLE"
+Class: attested
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+The Init value applies to Bluetooth Low Energy (BLE) test packets and (device-)
+advertising channel packets. Data channel packets use a custom Init value defined
+at connection time.
+BLE sniffer screenshot reference from "volta77" (29 May 2014), Nordic Developer
+Zone post
+Bluetooth SIG (6 December 2016), Bluetooth Specification, Core Version 5.0
+I Full definition (except Check) (Section 6.B.3.1.1, p.2600-1)
+I Shift register diagram (Figure 6.B.3.3, p.2601)
+Texas Instruments, Inc. (12 March 2013), BLE sniffer guide
+II Transcripts confirming implementation with 4 codewords (plus 3 with custom Init)
+00119992B1EBD7900201050702031802180418A85DEF
+030C5F96EA3018009992B1EBD790DF02EB
+04129992B1EBD7900B094B6579666F6264656D6FD39F03
+05225F96EA3018009992B1EBD7901B0A8560A77B22020F0050000000D007FFFF
+FFFF1FA948DA02
+Liam Goudge (1 October 2014), "Custom Bluetooth Low Energy board with 2.4GHz
+antenna hack and Nordic nRF51822..."
+II Transcript confirming implementation with 2 codewords (plus 8 with custom
+Init)
+4021EE04A5DDA7F90B094C69616D73424C4576320319410302010607030D180F
+180A181C929E
+C522C4A5F2BE7479EE04A5DDA7F9667265500B085B030500180000004800FFFF
+FFFF1FA9E478D0
+Anonymous (7 September 2012), BLE sniffer screenshot (courtesy of Texas
+Instruments, Inc. E2E(TM) Community forum)
+II Transcript confirming implementation with 2 codewords (plus 7 with custom
+Init)
+00090DEF84B72D3C020105C2E2A4
+0522AB2F853118000DEF84B72D3C782118C9567FA202270050000000D007FFFF
+FFFF1FAF0F1957
+Unique effective solution of codeword set
+Created: 7 February 2016
+Updated: 1 September 2017
+CRC-24/FLEXRAY-A
+width=24 poly=0x5d6dcb init=0xfedcba refin=false refout=false xorout=0x000000 check=0x7979bd residue=0x000000 name="CRC-24/FLEXRAY-A"
+Class: attested
+Channels A and B have different initial vectors to prevent frames crossing channels.
+FlexRay Consortium (October 2010), FlexRay Communications System Protocol
+Specification, version 3.0.1 (courtesy of nlrp Benchmark)
+I Definition: Width, Poly, Init, RefOut (Section 4.4, pp.117-8)
+I Pseudocode (Section 4.5, pp.118-20)
+FlexRay Consortium (October 2010), FlexRay Protocol Conformance Test
+Specification, version 3.0.1 (courtesy of nlrp Benchmark)
+IV 5 codewords (Section 2.7.5, p.681)
+18020209880000F339C1
+600A0248C80102646D70
+205606C848102030405060474380
+202E06C84810203040506096C9D1
+201A06C848102030405060B072EB
+Unique effective solution of codeword set
+Created: 3 November 2007
+Updated: 6 February 2017
+CRC-24/FLEXRAY-B
+width=24 poly=0x5d6dcb init=0xabcdef refin=false refout=false xorout=0x000000 check=0x1f23b8 residue=0x000000 name="CRC-24/FLEXRAY-B"
+Class: attested
+Channels A and B have different initial vectors to prevent frames crossing channels.
+FlexRay Consortium (October 2010), FlexRay Communications System Protocol
+Specification, version 3.0.1 (courtesy of nlrp Benchmark)
+I Definition: Width, Poly, Init, RefOut (Section 4.4, pp.117-8)
+I Pseudocode (Section 4.5, pp.118-20)
+FlexRay Consortium (October 2010), FlexRay Protocol Conformance Test
+Specification, version 3.0.1 (courtesy of nlrp Benchmark)
+IV 5 codewords (Section 2.7.5, p.681)
+18020209880000D5B910
+600A0248C8010242EDA1
+205606C848102030405060E6D9BE
+202E06C8481020304050603753EF
+201A06C84810203040506011E8D5
+Unique effective solution of codeword set
+Created: 3 November 2007
+Updated: 6 February 2017
+CRC-24/INTERLAKEN
+width=24 poly=0x328b63 init=0xffffff refin=false refout=false xorout=0xffffff check=0xb4f3e6 residue=0x144e63 name="CRC-24/INTERLAKEN"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+The Interlaken Alliance (7 October 2008), Interlaken Protocol Definition, version 1.2
+I Definition: Width, Poly (Section 5.3.2.2, p.18)
+I Definition: Init, RefIn, RefOut, XorOut (Appendix B, p.48)
+IV 1 codeword (Appendix B, p.48)
+520BB1047D585E00C2B4B401BBAF01000000FCB0B3A8468E1A0A01E1BA38A9DF
+00003677EEA56DDABEB48D4D93A88A1200001F9515F655DCC3857A641B260C51
+F10000000000000059E69D
+Created: 10 February 2016
+Updated: 6 February 2017
+CRC-24/LTE-A
+width=24 poly=0x864cfb init=0x000000 refin=false refout=false xorout=0x000000 check=0xcde703 residue=0x000000 name="CRC-24/LTE-A"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+3rd Generation Partnership Project (3GPP) TS 36.212 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 212 version 14.3.0 (July 2017)
+I Definition: Width, Poly, Init, XorOut, Residue (Section 5.1.1, p.10)
+I Attachment relation, defining RefIn ^ RefOut (Section 5.1.1, p.10)
+3rd Generation Partnership Project (3GPP) TS 36.321 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 321 version 14.3.0 (July 2017)
+Referenced from TS 136 212 section 5.2.2.1, p.23
+I Definition: RefIn, RefOut (Section 6.1.1, pp.67-8)
+Created: 13 February 2016
+Updated: 3 September 2017
+CRC-24/LTE-B
+width=24 poly=0x800063 init=0x000000 refin=false refout=false xorout=0x000000 check=0x23ef52 residue=0x000000 name="CRC-24/LTE-B"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+3rd Generation Partnership Project (3GPP) TS 36.212 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 212 version 14.3.0 (July 2017)
+I Definition: Width, Poly, Init, XorOut, Residue (Section 5.1.1, p.10)
+I Attachment relation, defining RefIn ^ RefOut (Section 5.1.1, p.10)
+3rd Generation Partnership Project (3GPP) TS 36.321 version 14.3.0 (June 2017)
+(zipped MS Word document) --- ETSI TS 136 321 version 14.3.0 (July 2017)
+Referenced from TS 136 212 section 5.2.2.1, p.23
+I Definition: RefIn, RefOut (Section 6.1.1, pp.67-8)
+Created: 13 February 2016
+Updated: 3 September 2017
+CRC-30/CDMA
+width=30 poly=0x2030b9c7 init=0x3fffffff refin=false refout=false xorout=0x3fffffff check=0x04c34abf residue=0x34efa55a name="CRC-30/CDMA"
+Class: academic
+Reference from named polynomial in Prof. Koopman's CRC Polynomial Zoo.
+CCSA Telecommunication Industry Standard YD/T 1838.3-2008 (5 November 2008)
+I Full definition (except Check) (Section 2.1.1.5.1.2, pp.2-44-5)
+Created: 20 February 2016
+Updated: 6 February 2017
+CRC-31/PHILIPS
+width=31 poly=0x04c11db7 init=0x7fffffff refin=false refout=false xorout=0x7fffffff check=0x0ce9e46c residue=0x4eaf26f1 name="CRC-31/PHILIPS"
+Class: confirmed
+Sincere thanks to Luigi (gigirex) for his assistance.
+AVMagazine.it has a forum topic on the Philips TV (in Italian).
+Philips 37PF9731 LCD TV
+II Implementation
+"gigirex" (1 March 2012), Computer Interfacing Forum topic 1774
+IV 7 codewords (76 bytes each)
+Created: 12 April 2012
+Updated: 6 February 2017
+CRC-32
+width=32 poly=0x04c11db7 init=0xffffffff refin=true refout=true xorout=0xffffffff check=0xcbf43926 residue=0xdebb20e3 name="CRC-32"
+Class: attested
+Alias: CRC-32/ADCCP, PKZIP
+ITU-T Recommendation V.42 (March 2002)
+I Definition: Residue; full mathematical description (Section 8.1.1.6.2, p.17)
+AUTOSAR (30 November 2016), AUTOSAR Classic Platform release 4.3,
+Specification of CRC Routines
+I Comprehensive primer on CRC theory (Section 7.1, pp.17-20)
+I All parameters (Section 7.2.3.1, p.24)
+IV 7 codewords (Section 7.2.3.1, p.25)
+000000001CDF4421
+F20183779DAB24
+0FAA005587B2C9B6
+00FF55111262A032
+332255AABBCCDDEEFF3D86AEB0
+926B559BA2DE9C
+FFFFFFFFFFFFFFFF
+Lasse Collin, Igor Pavlov et al. (27 August 2009), The .xz file format, version 1.0.4
+I Code: C (Section 6)
+PKWARE Inc. (1 February 1993), PKZIP 2.04g
+II Implementation
+Frank J. T. Wojcik, Guy Eric Schalnat, Andreas Dilger, Glenn Randers-Pehrson et
+al. (15 October 1999), libpng 1.0.5
+II Implementation
+Lasse Collin, Igor Pavlov et al. (21 May 2011), XZ Utils 5.0.3
+II Implementation
+Lammert Bies (August 2011), CRC calculator
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Ross N. Williams (19 August 1993), "A Painless Guide to CRC Error Detection
+Algorithms"
+III All parameters (except Residue)
+Emil Lenchak, Texas Instruments, Inc. (November 2004), CRC Implementation With
+MSP430
+III All parameters (except Residue) (Section 4.6, p.6)
+Berndt M. Gammel (29 October 2006), Matpack 1.9.1 class MpCRC documentation
+III All parameters (except Residue)
+Cisco Systems (September 2013), Meraki Air Marshal white paper
+IV 1 codeword (p.9)
+C008300028CFE9521D3B08EA449900E808EA449900E8300102007E649416
+Ryan Luecke, James Lyons (11 October 2011), CRC32 Checksums; The Good, The
+Bad, And The Ugly
+IV 1 codeword
+6173640ACEDE2D15
+Unique effective solution of codeword set
+Created: 30 March 2005
+Updated: 5 September 2017
+CRC-32/AUTOSAR
+width=32 poly=0xf4acfb13 init=0xffffffff refin=true refout=true xorout=0xffffffff check=0x1697d06a residue=0x904cddbf name="CRC-32/AUTOSAR"
+Class: attested
+AUTOSAR (30 November 2016), AUTOSAR Classic Platform release 4.3,
+Specification of CRC Routines
+I Comprehensive primer on CRC theory (Section 7.1, pp.17-20)
+I All parameters (Section 7.2.3.2, p.25)
+IV 7 codewords (Section 7.2.3.2, p.26)
+000000004022B36F
+F20183251A724F
+0FAA0055F82D6620
+00FF55116E99D79B
+332255AABBCCDDEEFF3D345AA6
+926B55788A68EE
+FFFFFFFFFFFFFFFF
+Unique effective solution of codeword set
+Created: 24 July 2016
+Updated: 6 February 2017
+CRC-32/BZIP2
+width=32 poly=0x04c11db7 init=0xffffffff refin=false refout=false xorout=0xffffffff check=0xfc891918 residue=0xc704dd7b name="CRC-32/BZIP2"
+Class: attested
+Alias: CRC-32/AAL5, CRC-32/DECT-B, B-CRC-32
+Used in DECT B-fields.
+Black's example AAL5 cells, with bytes 00 00 00 28 inserted between the described
+data fields and their CRCs, equal the examples in I.363.5.
+ITU-T Recommendation I.363.5 (August 1996)
+I Definition: Residue; full mathematical description (Section 9.2.1.2 (f), p.12)
+IV 3 codewords (Appendix I, p.39)
+0000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000028864D7F99
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF00000028C55E457A
+0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F20
+212223242526272800000028BF671ED0
+ETSI EN 300 175-3 version 2.5.1 (August 2013)
+I Definition: Residue; full mathematical description (Section 6.2.5.5, p.102)
+Julian Seward (4 September 1999), bzip2 0.9.5d
+II Implementation
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Emil Lenchak, Texas Instruments, Inc. (November 2004), CRC Implementation With
+MSP430
+III All parameters (except Residue) (Section 4.6, p.6)
+Richard Black (18 February 1994), Fast CRC32 in Software: Software
+Implementations
+III Code: C
+Richard Black (18 February 1994), Fast CRC32 in Software: Some Examples
+IV 3 codewords (same as in I.363.5)
+Angie Tso, Telecommunications Techniques Corp. (24 October 1994), Cell Relay
+mailing list post (courtesy of the Internet Archive)
+IV 4 codewords (first three same as in I.363.5)
+0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F20
+212223242526272811220028ACBA602A
+Ryan Luecke, James Lyons (11 October 2011), CRC32 Checksums; The Good, The
+Bad, And The Ugly
+IV 1 codeword
+6173640A86FA4F5B
+Unique effective solution of codeword set
+Created: 8 October 2008
+Updated: 15 February 2017
+CRC-32C
+width=32 poly=0x1edc6f41 init=0xffffffff refin=true refout=true xorout=0xffffffff check=0xe3069283 residue=0xb798b438 name="CRC-32C"
+Class: attested
+Alias: CRC-32/ISCSI, CRC-32/CASTAGNOLI, CRC-32/INTERLAKEN
+IETF RFC 7143 (April 2014)
+I Full definition (except Check) (Section 13.1, pp.230-1)
+The Interlaken Alliance (7 October 2008), Interlaken Protocol Definition, version 1.2
+I Definition: Width, Poly (Section 5.4.6, p.33)
+I Definition: Init, RefIn, RefOut, XorOut (Appendix B, p.48)
+Dipl. Inf. Johann F. Loefflmann (30 July 2006), Jacksum 1.7.0
+II Implementation
+Greg Cook (11 February 2014), Base91 level 1 version 2.50
+II Implementation
+III Full mathematical description
+III All parameters (except Residue)
+III Code: C
+Mark Bakke, Julian Satran, Venkat Rangan (May-June 2001), IP Storage Mailing
+List thread
+III All parameters (except Residue) (Bakke, Rangan)
+III Definition: Width, Poly, Init, XorOut (Satran)
+III Code: C (Rangan)
+IV 3 codewords (Bakke)
+0000000000000000000000000000000000000000000000000000000000000000
+AA36918A
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+43ABA862
+000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F
+4E79DD46
+Created: 10 September 2005
+Updated: 6 February 2017
+CRC-32D
+width=32 poly=0xa833982b init=0xffffffff refin=true refout=true xorout=0xffffffff check=0x87315576 residue=0x45270551 name="CRC-32D"
+Class: confirmed
+Greg Cook (11 February 2014), Base91 level 1 version 2.50
+II Implementation
+III Full mathematical description
+III All parameters (except Residue)
+III Code: C
+Prof. Philip Koopman (July 2002), "32-Bit Cyclic Redundancy Codes for Internet
+Applications", Proceedings of The International Conference on Dependable
+Systems and Networks
+III Polynomial discovered by Castagnoli; properties confirmed by Koopman
+Created: 28 November 2008
+Updated: 6 February 2017
+CRC-32/MPEG-2
+width=32 poly=0x04c11db7 init=0xffffffff refin=false refout=false xorout=0x00000000 check=0x0376e6e7 residue=0x00000000 name="CRC-32/MPEG-2"
+Class: attested
+ISO/IEC 13818-1:2000 --- ITU-T Recommendation H.222.0 (February 2000)
+I Definition: Width, Poly, Init, RefIn, RefOut, Residue (Annex A, p.97)
+I CRC checking algorithm (Annex A, p.97)
+I Partial shift register diagram (Annex A, p.97)
+Dipl. Inf. Johann F. Loefflmann (30 July 2006), Jacksum 1.7.0
+II Implementation
+VideoLAN Organization (24 May 2017), VLC 2.2.6 module vlc-2.2.6/modules
+/mux/mpeg/ps.c
+III Code: C
+Created: 8 October 2008
+Updated: 5 September 2017
+CRC-32/POSIX
+width=32 poly=0x04c11db7 init=0x00000000 refin=false refout=false xorout=0xffffffff check=0x765e7680 residue=0xc704dd7b name="CRC-32/POSIX"
+Class: attested
+Alias: CKSUM
+The cksum program processes a representation of the input stream length following
+the input. It returns 930766865 (0x377A6011) on the check string, processed internally
+as 31 32 33 34 35 36 37 38 39 09. See the definition for details.
+The Open Group (1997), Single Unix Specification, version 2, Commands & Utilities
+Issue 5, Reference Pages: cksum
+I Full definition (except Check)
+Q. Frank Xia (December 1999), GNU cksum 2.0a
+II Implementation
+Michael Niedermayer (29 July 2017), FFmpeg 3.3.3 (bzip2 compressed tarfile),
+module ffmpeg-3.3.3/libavutil/tests/crc.c
+IV 1 codeword (before XorOut stage)
+1999 bytes (i+i*i) plus 3F0A451F (source: plus C0F5BAE0)
+Created: 30 March 2005
+Updated: 1 September 2017
+CRC-32Q
+width=32 poly=0x814141ab init=0x00000000 refin=false refout=false xorout=0x00000000 check=0x3010bf7f residue=0x00000000 name="CRC-32Q"
+Class: attested
+Used for aeronautical data. Recognised by the ICAO.
+EUROCONTROL (20 March 2006), AIXM Primer 4.5
+I Definition: Width, Poly, Init, XorOut, RefIn (Section 6.2, pp.23-5)
+I Flowchart (p.24)
+I Code: Java (Appendix B, pp.41-5)
+IV 8 codewords (Table 6.1, p.25)
+3438303633374EA5A7C704
+3031363334313145A1AE5741
+3438303633374E3031363334313145A1BA30EE
+3738326C297100
+3438303633374E30313633343131453738326A259F4E
+34362E37266D25C1
+3438303633374E303136333431314534362E372F866D6D
+3438303633374E303136333431314537383234362E375E5DC940
+Created: 29 April 2009
+Updated: 6 February 2017
+CRC-32/JAMCRC
+width=32 poly=0x04c11db7 init=0xffffffff refin=true refout=true xorout=0x00000000 check=0x340bc6d9 residue=0x00000000 name="CRC-32/JAMCRC"
+Class: confirmed
+PVL Team (25 October 2008), CRC .NET control, version 14.0.0.0
+II Implementation
+Altera Corporation (April 1999), crc MegaCore Function Data Sheet, version 2
+(courtesy of the Internet Archive)
+III All parameters (except Residue) (p.6)
+Created: 30 March 2005
+Updated: 6 February 2017
+CRC-32/XFER
+width=32 poly=0x000000af init=0x00000000 refin=false refout=false xorout=0x00000000 check=0xbd0be338 residue=0x00000000 name="CRC-32/XFER"
+Class: confirmed
+Jon Welch (12 January 2007), XFER in C, version 5.1a
+II Implementation
+William H. Press, Brian P. Flannery, Saul A. Teukolsky, William T. Vetterling (1992),
+Numerical recipes in C: The art of scientific computing, 2nd ed., Cambridge
+University Press, ISBN 0-521-43108-5 (embedded content)
+III Presents polynomial and its properties (p.299)
+Created: 30 March 2005
+Updated: 6 February 2017
+CRC-40/GSM
+width=40 poly=0x0004820009 init=0x0000000000 refin=false refout=false xorout=0xffffffffff check=0xd4164fc646 residue=0xc4ff8071ff name="CRC-40/GSM"
+Class: academic
+Correction to XorOut by Mark Cammidge, Peralex Electronics (Pty) Ltd.
+ETSI TS 100 909 version 8.9.0 (January 2005)
+I Full mathematical description (Section 4.1.2, p.61)
+Patrick Geremia, Texas Instruments, Inc. (April 1999), Cyclic Redundancy Check
+Computation: An Implementation Using the TMS320C54x
+III Definition: Width, Poly (p.5)
+III Code: TMS320C54x assembler (Appendix E, pp.30-33)
+Berndt M. Gammel (29 October 2006), Matpack 1.9.1 class MpCRC documentation
+III Definition: Width, Poly
+Created: 10 December 2009
+Updated: 6 February 2017
+CRC-64
+width=64 poly=0x42f0e1eba9ea3693 init=0x0000000000000000 refin=false refout=false xorout=0x0000000000000000 check=0x6c40df5f0b497347 residue=0x0000000000000000 name="CRC-64"
+Class: academic
+Alias: CRC-64/ECMA-182
+Used in DLT-1 tape cartridges. For the algorithm often misidentified as ECMA, see
+XZ.
+ECMA standard ECMA-182 (December 1992) --- ISO/IEC 13421:1993
+I Full mathematical description (Annex B, p.51)
+Created: 6 April 2009
+Updated: 5 September 2017
+CRC-64/GO-ISO
+width=64 poly=0x000000000000001b init=0xffffffffffffffff refin=true refout=true xorout=0xffffffffffffffff check=0xb90956c775a41001 residue=0x5300000000000000 name="CRC-64/GO-ISO"
+Class: confirmed
+Go implementation reference contributed by "freetrader".
+The Go Authors, The Go Programming Language, package crc64
+II Implementation (using constant crc64.ISO)
+The Go Authors (26 January 2017), The Go Programming Language, module
+src/hash/crc64/crc64.go
+III Code: Go
+The Go Authors (26 January 2017), The Go Programming Language, module
+src/hash/crc64/crc64_test.go
+IV 32 codewords (selection)
+0000000000000000
+610000000000002034
+6162000000000020C436
+6162630000000020C47637
+6162636400000020C4766733
+6162636465000020C47667D332
+6162636465660020C47667D30230
+6162636465666720C47667D302B031
+6162636465666768C47667D302B0210E
+6162636465666768697667D302B0216E8B
+6162636465666768696A67D302B0216E5B7F
+48652077686F2068617320612073686164792070617374206B6E6F7773207468
+6174206E69636520677579732066696E697368206C6173742EB45ABEE25917DBC7
+46726565212046726565212F4120747269702F746F204D6172732F666F722039
+30302F656D707479206A6172732F4275726D61205368617665EFA0DAA61142FCEA
+4E6570616C207072656D69657220776F6E27742072657369676E2EA628EFD66A
+865552
+73697A653A2020612E6F75743A2020626164206D61676963D2ADCDDA653C55F3
+Unique effective solution of codeword set (unverified)
+Created: 28 January 2017
+Updated: 6 February 2017
+CRC-64/WE
+width=64 poly=0x42f0e1eba9ea3693 init=0xffffffffffffffff refin=false refout=false xorout=0xffffffffffffffff check=0x62ec59e3f1a4f00a residue=0xfcacbebd5931a992 name="CRC-64/WE"
+Class: confirmed
+Wolfgang Ehrhardt (27 March 2012), CRC/Hash plugin for FAR Manager
+II Implementation
+Created: 8 November 2009
+Updated: 6 February 2017
+CRC-64/XZ
+width=64 poly=0x42f0e1eba9ea3693 init=0xffffffffffffffff refin=true refout=true xorout=0xffffffffffffffff check=0x995dc9bbdf1939fa residue=0x49958c9abd7d353f name="CRC-64/XZ"
+Class: attested
+Alias: CRC-64/GO-ECMA
+An algorithm commonly misidentified as ECMA. For the true ECMA algorithm see
+CRC-64.
+Go implementation reference contributed by "freetrader".
+AUTOSAR (30 November 2016), AUTOSAR Classic Platform release 4.3,
+Specification of CRC Routines
+I Comprehensive primer on CRC theory (Section 7.1, pp.17-20)
+I All parameters (Section 7.2.4.1, p.26)
+IV 7 codewords (Section 7.2.4.1, p.27)
+000000004B9F1B1E3586A5F4
+F20183C6F1648166279C31
+0FAA005575157C66F7D0C554
+00FF5511E604077EBE2238A6
+332255AABBCCDDEEFFD5E5A819B2CE1E70
+926B554E3E9FB5A996AA5F
+FFFFFFFF00000000FFFFFFFF
+Lasse Collin, Igor Pavlov et al. (27 August 2009), The .xz file format, version 1.0.4
+I Code: C (Section 6)
+Lasse Collin, Igor Pavlov et al. (21 May 2011), XZ Utils 5.0.3
+II Implementation
+The Go Authors, The Go Programming Language, package crc64
+II Implementation (using constant crc64.ECMA)
+The Go Authors (26 January 2017), The Go Programming Language, module
+src/hash/crc64/crc64.go
+III Code: Go
+The Go Authors (26 January 2017), The Go Programming Language, module
+src/hash/crc64/crc64_test.go
+IV 32 codewords (selection)
+0000000000000000
+61052B652E77840233
+616246B0840E207365BC
+6162632776271A4A09D82C
+61626364BA60596E59289D3C
+6162636465F29508FB58DF0B04
+616263646566F400A745859F8ED0
+61626364656667660E71CCA8A320EC
+6162636465666768590C7A640AF3B467
+6162636465666768698EEF569DC8F66699
+6162636465666768696AF47357CD2E3A0932
+48652077686F2068617320612073686164792070617374206B6E6F7773207468
+6174206E69636520677579732066696E697368206C6173742E0DA0B92AACC06285
+46726565212046726565212F4120747269702F746F204D6172732F666F722039
+30302F656D707479206A6172732F4275726D612053686176658A513E353038601F
+4E6570616C207072656D69657220776F6E27742072657369676E2E415A746AB1
+F20E79
+73697A653A2020612E6F75743A2020626164206D616769634D3AD6D86CE4B5E3
+Unique effective solution of codeword set (unverified)
+Created: 4 July 2011
+Updated: 5 September 2017
+CRC-82/DARC
+width=82 poly=0x0308c0111011401440411 init=0x000000000000000000000 refin=true refout=true xorout=0x000000000000000000000 check=0x09ea83f625023801fd612 residue=0x000000000000000000000 name="CRC-82/DARC"
+Class: attested
+The single codeword is supported by the codewords confirming CRC-6/DARC,
+defined identically apart from Width, Poly in the same standard. The codeword is
+presented in transmission order, whereas the bytes of data are sent LSB first. The
+example input message is 190 bits long, considering that the inner CRC is 14 bits.
+The CRC mask is ...C0 FF FF FF FF FF FF FF FF FF FF.
+ETSI EN 300 751 version 1.2.1 (January 2003)
+I Definition: Width, Poly (Section 11.1, p.67)
+I Definition: RefIn, RefOut (Section 12, p.69-70)
+IV 1 codeword (Section 11.1, p.67)
+02000102372050524F4A454354204D41494E4D454E553B48424065001049B5FB
+9ADE (source: 40008040EC040A4AF252A2C22A04B2829272B2A272AADC12
+4202A6000892ADDF597B)
+See section 12 for details of the transmission order.
+reveng -m CRC-82/DARC -c 02000102372050524F4A454354204D41494E4D454E553B48
+424065001049B5FB9ADE --> 0000000000000000000000
+reveng -m CRC-82/DARC -a 1 -A 8 -r -X -c 01000000000000001000000001000000
+111011000000010000001010010010101111001001010010101000101100001000101010
+000001001011001010000010100100100111001010110010101000100111001010101010
+11011100000100 --> 40424065001049B5FB9ADE
+Created: 14 December 2009
+Updated: 6 February 2017

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06622EE9-9D04-4D8F-95C8-BDBEC5DC29DF}"
+	ProjectSection(SolutionItems) = preProject
+		crc_catalog_summary.txt = crc_catalog_summary.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crc_catalog", "crc_catalog.vcxproj", "{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Debug|x64.ActiveCfg = Debug|x64
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Debug|x64.Build.0 = Debug|x64
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Debug|x86.ActiveCfg = Debug|Win32
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Debug|x86.Build.0 = Debug|Win32
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Release|x64.ActiveCfg = Release|x64
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Release|x64.Build.0 = Release|x64
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Release|x86.ActiveCfg = Release|Win32
+		{FA14DA1B-5FF1-4568-9E7A-5CA026E0C953}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10E90FE6-891F-4D29-97E5-4D7D727FA775}
+	EndGlobalSection
+EndGlobal
